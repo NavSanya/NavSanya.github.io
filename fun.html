@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fun - Nav Sanya Anand</title>
+    <style>
+        body {
+            background-color: #E6F5F1; /* Light Mint */
+            font-family: Arial, sans-serif;
+        }
+
+        .tabs {
+            overflow: hidden;
+            background: #647AA3; /* Slate Blue */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tabs li {
+            float: left;
+        }
+
+        .tabs a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .tabs a:hover, .tabs a.active {
+            background: #D4C1EC; /* Soft Lavender */
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #FFFFFF; /* White */
+            clear: both;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        #section1 {
+            background-color: #D4C1EC; /* Soft Lavender */
+            font-size: 0.7em;
+            text-align: center;
+            height: 120px;
+            width: 300px;
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            padding: 10px;
+            float: left;
+        }
+
+        .clearfloat {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            outline-style: double;
+            outline-width: 5px;
+            border-color: #4A4A4A; /* Cool Gray */
+        }
+
+        .side-by-side {
+            display: inline-block;
+            width: calc(50% - 20px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+            background-color: #FFFFFF; /* White */
+            box-sizing: border-box;
+            padding: 10px;
+            float: left;
+        }
+
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .container {
+            overflow: auto;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #647AA3; /* Slate Blue */
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #D4C1EC; /* Soft Lavender */
+            color: #4A4A4A; /* Cool Gray */
+        }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var tabs = document.querySelectorAll('.tabs a');
+        var contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(function (tab, index) {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+                tabs.forEach(function (t) { t.classList.remove('active'); });
+                tab.classList.add('active');
+                contents.forEach(function (content) { content.classList.remove('active'); });
+                contents[index].classList.add('active');
+            });
+        });
+
+        // Activate the first tab by default
+        tabs[0].click();
+    });
+</script>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="fun.html" class="active">Fun</a>
+    </div>
+    <div id="section2">
+        <h1>Fun</h1>
+    </div>
+    
+    <ul class="tabs">
+        <li><a href="#books" class="active">Books</a></li>
+        <li><a href="#anime">Anime</a></li>
+    </ul>
+    
+    <div class="tab-content" id="books">
+        <h3>Welcome to My Reading Corner</h3>
+        <p>Hello, fellow book lovers! I'm thrilled to share my passion for reading with you. If you're like me, there's nothing quite like diving into a good book and getting lost in its world.</p>
+        <h5>My Ever-Evolving Taste in Books</h5>
+        <p>One thing you should know about me is that my taste in book genres is always evolving. From the heart-pounding thrill of mystery novels to the heartwarming tales of romance, I love exploring new literary worlds and discovering unique stories. Here are a few genres I currently enjoy:</p>
+                <ul>
+                <li>Fantasy: Enchanting realms, magical creat>ures, and epic adventures.</li>
+                <li>Science Fiction: Futuristic worlds, advanced technology, and thought-provoking themes.</li>
+                <li>Romance: Heartfelt stories, unforgettable characters, and swoon-worthy moments.</li>
+                <li>Historical Fiction: Richly detailed settings, intriguing historical events, and compelling narratives.</li>
+                </ul>
+        <h5>My Wattpad Reading Lists</h5>
+        <p>I believe that sharing our favorite reads is one of the best ways to connect with fellow readers. That's why I'm excited to share my Wattpad reading lists with you. On my Wattpad profile, you'll find carefully curated collections of stories that have captivated me, from hidden gems to popular favorites. Whether you're looking for a new series to binge or a standalone novel to enjoy, there's something for everyone.</p>
+        <p>You can check out my Wattpad reading lists <a href = "https://www.wattpad.com/user/NavSanya">here</a>.</p>
+    </div>
+    
+    <div class="tab-content" id="anime">
+        <h3>Exploring the World of Anime</h3>
+        <p>Recently, I've ventured into the fascinating world of anime, and it's quickly become a new passion of mine. There's something incredibly captivating about the way anime blends stunning visuals, compelling stories, and unforgettable characters. Whether it's the intensity of a battle scene or the depth of an emotional moment, anime has a unique way of telling stories that resonates with me.</p>
+        <h5>Anime I'm Currently Watching</h5>
+        <p>I'm excited to share the anime series I'm currently following. Each of these shows has drawn me in with its own unique charm:</p>
+        <ul>
+            <li><strong>Demon Slayer: Kimetsu no Yaiba - Season 4:</strong> The breathtaking animation and emotional story arcs have made this series a favorite of mine.</li>
+            <li><strong>My Hero Academia: Boku no Hero Academia - Season 7:</strong> The growth of the characters and the epic battles keep me hooked on every episode.</li>
+            <li><strong>Dr. Stone - Season 3 Part 2:</strong> The blend of science and adventure in this series is both educational and entertaining.</li>
+            <li><strong>Tadaima, Okaeri:</strong> A heartfelt story that touches on themes of family, love, and acceptance.</li>
+            <li><strong>Fairy Tail:</strong> The camaraderie among the characters and the magic-filled adventures make this a classic that I’m thoroughly enjoying.</li>
+        </ul>
+    </div>
+    
+    </body>
+    </html>

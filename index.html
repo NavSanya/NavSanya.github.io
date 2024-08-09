@@ -1,290 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nav Sanya Anand</title>
+    <title>Home - Nav Sanya Anand</title>
     <style>
         body {
-            background-color: lightgray;
+            background-color: #E6F5F1; /* Light Mint */
             font-family: Arial, sans-serif;
         }
-
-        .tabs {
+        .navbar {
             overflow: hidden;
-            background: #333;
-            margin: 0;
-            padding: 0;
-            list-style: none;
+            background-color: #647AA3; /* Slate Blue */
         }
-
-        .tabs li {
+        .navbar a {
             float: left;
-        }
-
-        .tabs a {
             display: block;
-            padding: 10px 20px;
             color: white;
+            text-align: center;
+            padding: 14px 20px;
             text-decoration: none;
         }
-
-        .tabs a:hover, .tabs a.active {
-            background: #666;
+        .navbar a:hover {
+            background-color: #D4C1EC; /* Soft Lavender */
+            color: #4A4A4A; /* Cool Gray */
         }
-
-        .tab-content {
-            display: none;
+        .content {
             padding: 20px;
-            background: white;
-            clear: both;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        #picture {
-            box-sizing: border-box; 
-            padding: 10px; 
-			height: 10px
-			width: 10px
-			margin-top: auto;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #section1 {
-            background-color: darkgrey;
-            font-size: 0.7em;
-            text-align: center;
-            height: 120px;
-            width: 300px;
-            margin-top: auto;
-            margin-left: auto;
-            margin-right: auto;
-            box-sizing: border-box; 
-            padding: 10px; 
-            float: left;
-        }
-
-        .clearfloat {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            outline-style: double;
-            outline-width: 5px;
-        }
-
-        .side-by-side {
-            display: inline-block;
-            width: calc(50% - 20px);
-            margin-right: 20px;
-            margin-bottom: 20px; 
-            background-color: white;
-            box-sizing: border-box; 
-            padding: 10px; 
-            float: left;
-        }
-
-        .container::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .container {
-            overflow: auto; 
-        }
+        }        
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var tabs = document.querySelectorAll('.tabs a');
-            var contents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach(function (tab, index) {
-                tab.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    tabs.forEach(function (t) { t.classList.remove('active'); });
-                    tab.classList.add('active');
-                    contents.forEach(function (content) { content.classList.remove('active'); });
-                    contents[index].classList.add('active');
-                });
-            });
-
-            // Activate the first tab by default
-            tabs[0].click();
-        });
-    </script>
 </head>
 <body>
-<div id="section2">
-    <h1>Nav Sanya Anand</h1>
-	<img src = "Images/passportphoto.jpg" alt = "Nav Pic" height= "auto" width = "200">
-    <p>Results-oriented and highly motivated professional with a master’s in computer science. A candidate with a strong foundation in data science and machine learning, backed by a bachelor’s degree in computer science. Proven expertise in back-end development, and web design, and extensive experience in leading and contributing to diverse projects. Adept at collaborating with cross-functional teams and leveraging technical skills for impactful contributions. Seeking opportunities to apply knowledge and skills in a dynamic and challenging environment.</p>
-    <p>Fresno, CA 93737</p>
-    <p>(628) 219 - 4626</p>
-    <p><a href="mailto:anandnavsanya@gmail.com">anandnavsanya@gmail.com</a></p>
-    <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-    <p><a href="https://www.github.com">GitHub</a></p>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="fun.html">Fun</a>
 </div>
-
-<ul class="tabs">
-    <li><a href="#education" class="active">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#extracurricular">Extra Curricular</a></li>
-    <li><a href="#certificates">Certificates</a></li>
-    <li><a href="#awards">Awards & Honors</a></li>
-</ul>
-
-<div class="tab-content" id="education">
-    <h3>EDUCATION</h3>
-    <h4>University Of Southern California — Master of Science (Computer Science-Data Science)</h4>
-    <p>August 2022 - May 2024</p>
-    <p>Relevant Coursework: Analysis of Algorithms, Database Systems, Foundations of AI, Machine Learning, Foundations and Applications of Data Mining, Data Management, Applied NLP</p>
-    <p>Extracurricular Activities: Sikh Student Association Member, Association of Indian Students Member</p>
-
-    <h4>California State University, Fresno — Bachelor of Science (Computer Science)</h4>
-    <p>August 2018 - December 2021</p>
-    <p>Relevant Coursework: Algorithms and Data Structures, Database Systems, Simulation, Artificial Intelligence, Bio-Inspired Machine Learning, Internetworking Systems and Protocols, Parallel Programming</p>
-    <p>Extracurricular Activities: International Ambassador 2021, Computer Science Club President and Founder 2021</p>
-</div>
-
-<div class="tab-content" id="experience">
-    <h3>INDUSTRIAL EXPERIENCE</h3>
-    <h4>Arthasarathi, Mumbai, India — Back End Development Intern</h4>
-    <p>April 2022 - July 2022</p>
-    <p>Collaborated with the product and marketing team to develop the website using the Spring Boot framework.</p>
-    <p>Designed, analyzed, developed, tested, deployed, and supported website phases.</p>
-    <p>Updated and maintained the MySQL database server.</p>
-    <p>Resolved ongoing issues, added new features, and provided end-to-end support.</p>
-    <p><a href="https://www.arthasarathi.com/" target="_blank">Arthasarathi</a></p>
-
-    <h4>Green International, Remote — Digital Technology Manager (Part-Time)</h4>
-    <p>May 2021 - Present</p>
-    <p>Website Development and Management. Responsible for creating, maintaining, and updating company websites, ensuring functionality, usability, and visual appeal.</p>
-    <p>Collaborate with various departments to integrate technology solutions that streamline processes, enhance efficiency, and support business objectives.</p>
-    <p><a href="http://greeninternational.in/" target="_blank">Green International</a></p>
-    <p><a href="https://www.greenauto.co.in/" target="_blank">Green Auto</a></p>
-</div>
-
-<div class="tab-content" id="projects">
-    <h3>ACADEMIC and PERSONAL PROJECTS</h3>
-
-    <h4>LLM Performance Enhancement Project</h4>
-    <p><strong>Technologies:</strong> Python, Jupyter, Google Collab, VS Code, GitHub – (USC)</p>
-    <p><strong>Project description:</strong> Investigated enhancing Large Language Models (LLMs) performance on Non-Latin script tasks, such as Hindi and Korean, inspired by the ROMANSETU paper. Explored fine-tuning LLMs with romanized data to improve performance and inference efficiency for tasks like translation and sentiment analysis on Hindi and Korean text.</p>
-    <p><a href="https://github.com/NavSanya/CSCI544_Project_Romansetu" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Led the project, overseeing data curation and experimentation. Collaborated with team members on implementation and evaluation. Presented findings and insights from experiments.</p>
-
-    <h4>My Relational Database</h4>
-    <p><strong>Technologies:</strong> Python, Jupyter, Google Collab, VS Code, GitHub – (USC)</p>
-    <p><strong>Project description:</strong> Python-based database management system featuring a user-friendly command-line interface. It supports key functionalities such as data retrieval, table joining, aggregation, data insertion, table creation, data updating, row deletion, and table display. The system is designed for simplicity, efficiency, and real-world data exploration using the IMDB Top 250 Movies dataset.</p>
-    <p><a href="https://github.com/NavSanya/MyRelationalDatabase" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Implemented core database functionalities, query language processor, and user-friendly CLI. Conducted testing, debugging, and optimization for real-world data exploration.</p>
-
-    <h4>Sequence Alignment</h4>
-    <p><strong>Technologies:</strong> Java, VS Code, GitHub – (USC)</p>
-    <p><strong>Project description:</strong> Collaboratively worked on the implementation of the Sequence alignment algorithm used in computational biology. Dynamic Programming implementation using M x N memory. Divide and Conquer solution using twice the computational time but reducing the memory space required by a factor of at least a billion (concerning actual DNA inputs).</p>
-    <p><a href="https://github.com/NavSanya/CSCI570SequenceAlignmentProj" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Implemented the Divide and conquer solution. Testing and documenting the result.</p>
-
-    <h4>Geospatial Data Handling</h4>
-    <p><strong>Technologies:</strong> KML, SQL, HTML, GitHub – (USC)</p>
-    <p><strong>Project description:</strong> Work with spatial data - you will collect/create (generate/sample) your spatial data, visualize it, do queries on it, and visualize the query results.</p>
-    <p><a href="https://github.com/NavSanya/CSCI585_Geospatial_Data_Handling" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Implemented spatial data handling, visualization, and query functionalities.</p>
-
-    <h4>Algorithms and Data Structures</h4>
-    <p><strong>Technologies:</strong> Python3, Java, C++, VS Code, GitHub</p>
-    <p><strong>Project description:</strong> Find the difference in Implementation written in Python, Java, and C++ of different algorithms and data structures: Comparison Sorts, Non-Comparison Sorts, Heaps, Linked List, Hash Tables, Graphs.</p>
-    <p><a href="https://github.com/NavSanya/Algorithms_DataStructures" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Developed implementations in Python, Java, and C++ for various algorithms and data structures.</p>
-
-    <h4>ENNTS</h4>
-    <p><strong>Technologies:</strong> Python3, Jupyter Notebook, GitHub – (CSU FRESNO)</p>
-    <p><strong>Project description:</strong> How long does it take to “re-train” a Neural Network on a similar dataset? What similarity of datasets mean in this context? Understanding Meta-learning using Simple Datasets can Provide insights into the above questions.</p>
-    <p><a href="https://github.com/NavSanya/ENNTS" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Explored meta-learning using simple datasets and trained neural network models.</p>
-
-    <h4>Iris Classification using Decision Tree and Gaussian Naive Bayes</h4>
-    <p><strong>Technologies:</strong> Python3, Google Collab, GitHub – (CSU FRESNO)</p>
-    <p><strong>Project description:</strong> Collaboratively worked on Supervised Learning Predictive Modeling approach using Gaussian Naive Bayes and Decision Tree Classification Dataset containing the iris flower species which is used as the baseline when determining the accuracy of our trained models.</p>
-    <p><a href="https://github.com/NavSanya/IrisClassification-DT-GNU" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Led a team in supervised learning predictive modeling using Gaussian Naive Bayes and Decision Tree Classification.</p>
-
-    <h4>ML Sudoku Analysis</h4>
-    <p><strong>Technologies:</strong> Python3, Jupyter Notebook, GitHub – (CSU FRESNO)</p>
-    <p><strong>Project description:</strong> Collaboratively worked on the implementation and analysis of 30 Sudoku Puzzles solved using Evolutionary Algorithms, Simulated Annealing, and Satisfiability.</p>
-    <p><a href="https://github.com/NavSanya/ML-Sudoku-Analysis" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Led a team in the implementation and analysis of Sudoku puzzles solved using Evolutionary Algorithms, Simulated Annealing, and Satisfiability. Analyzed the results and documented my findings in a presentation.</p>
-
-    <h4>Parallel DFS and BFS using OpenMP</h4>
-    <p><strong>Technologies:</strong> C++, GitHub – (CSU FRESNO)</p>
-    <p><strong>Project description:</strong> Coding and Analyzing Breadth-First Search (BFS) and Depth-First Search (DFS) serially and parallelly (OpenMP).</p>
-    <p><a href="https://github.com/NavSanya/Parallel_DFS_BFS_OpenMp" target="_blank">GitHub Project</a></p>
-    <p><strong>My Role:</strong> Implemented Breadth-First Search (BFS) and Depth-First Search (DFS) serially and in parallel using OpenMP. Analyzed the results and documented my findings in a report.</p>
-</div>
-
-<div class="tab-content" id="skills">
-    <h3>SKILLS</h3>
-    <p><strong>Programming Languages:</strong> Java, Python, C++, HTML, CSS</p>
-    <p><strong>Databases:</strong> MySQL, MongoDB, DynamoDB, JSON, XML, MS Access</p>
-    <p><strong>Tools & Platforms:</strong> Git, GitHub, Visual Studio, IntelliJ, Jupyter, Tableau, AWS EC2</p>
-    <p><strong>Libraries:</strong> Matplotlib, NumPy, PyTorch, Keras, TensorFlow, Pandas, Scikit-learn</p>
-    <p><strong>Other:</strong> Object-Oriented Programming (OOP), Data Analysis, Software Development, Microsoft Suite, Google Suite, Social Media Platforms</p>
-    <p><strong>Soft Skills:</strong> Strong Communication and Interpersonal Skills, Organization and Planning Skills, Analytical and Critical Thinking</p>
-</div>
-
-<div class="tab-content" id="extracurriculars">
-    <h3>EXTRACURRICULAR ACTIVITIES</h3>
-
-    <h4>University of Southern California — TA at CS@SC</h4>
-    <p><strong>January 2024 - May 2024</strong></p>
-    <p>Developed strategies and built initiatives to meet the needs of a diverse population. Targeted various courses, such as Robotics, Web Development, and Scratch.</p>
-
-    <h4>California State University, Fresno — Computer Science Tutor</h4>
-    <p><strong>August 2019 - December 2021</strong></p>
-    <p>Conducted in-person and online tutoring sessions for groups of various sizes. Targeted various courses, such as Introduction to Programming, Algorithms and Data Structures, Foundations of Computer Science, and Introduction to Operating Systems. Participated in tutor training and development sessions through Zoom.</p>
-
-    <h4>California State University, Fresno — Computer Science Grader</h4>
-    <p><strong>January 2021 - December 2021</strong></p>
-    <p>Graded student assignments and projects for the following courses: CSCI 40 - Introduction to Programming and Problem-solving, and CSCI 144/114 - Introduction to Operating Systems.</p>
-
-    <h4>President, Vice President — Computer Science Club – California State University, Fresno</h4>
-    <p><strong>My Role:</strong> The “external spokesperson” of the group who regularly interacts with other student organizations and University officials. Supervised all student organization meetings, oversaw the process of student organization event planning, scheduled locations for meetings and events, maintained communication between the student organization president and individual participants (including emails and phone calls), managed social media representation, and produced club newsletters.</p>
-
-    <h4>International Ambassador — California State University, Fresno</h4>
-    <p><strong>My Role:</strong> Guided international students throughout their first semester. Attended to international students' problems and concerns throughout the semester, aided with housing, campus life, and immigration, and oversaw the process of student organization event planning.</p>
-</div>
-
-
-<div class="tab-content" id="certificates">
-    <h3>CERTIFICATES</h3>
-    <p><strong>Cybersecurity for Data Science</strong></p>
-    <p>Issued by: University of Colorado Boulder</p>
-    <p>Date Issued: July 2023</p>
-
-    <p><strong>Data Science Professional Certificate</strong></p>
-    <p>Issued by: IBM</p>
-    <p>Date Issued: Ongoing</p>
-</div>
-
-<div class="tab-content" id="awards">
-    <h3>AWARDS & HONORS</h3>
-    <p><strong>Dean’s List</strong></p>
-    <p>California State University, Fresno</p>
-    <p>January 2021 - December 2021</p>
-
-    <p><strong>Outstanding International Student Award</strong></p>
-    <p>California State University, Fresno</p>
-    <p>May 2021</p>
+<div class="content">
+    <h1>Welcome to Nav's World</h1>
+    <h3>Hello, I'm Nav!</h3>
+    <img src = "Images/passportphoto.jpg" alt = "Nav Pic" height= "auto" width = "200">
+    <p>Welcome to my personal corner of the internet! Whether you're here to discover what I'm passionate about, or explore the projects I'm working on, I'm glad you stopped by.</p>
+    <h3>Who Am I?</h3>
+    <p>I'm a tech enthusiast with a deep love for coding, AI, and all things innovative. When I'm not immersed in the latest tech project, you'll find me exploring new interests, reading captivating books, or diving into the vibrant world of anime. My curiosity drives me to continuously learn and evolve, whether it's mastering a new programming language or discovering a new genre of stories.</p>
 </div>
 </body>
 </html>
