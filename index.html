@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Nav Sanya Anand</title>
     <style>
         body {
-            background-color: #E6F5F1; /* Light Mint */
-            font-family: Arial, sans-serif;
+            margin: 0;
+            font-family: 'Roboto';
+            background: linear-gradient(90deg, #bd91ec, #fbb793, #f1aed5);
+            background-size: 600% 600%;
+            animation: gradientAnimation 12s ease infinite;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
         }
+    
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    
+        .container {
+            background-color: white;
+            max-width: 900px;
+            margin-top: 20px;
+            padding: 40px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .logo h1 {
+            font-size: 1.5em;
+            color: #141893;
+            margin: 0;
+        }
+
         .navbar {
             overflow: hidden;
-            background-color: #647AA3; /* Slate Blue */
+            background-color: #0043b8;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
+    
         .navbar a {
             float: left;
             display: block;
@@ -18,29 +73,73 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
+    
         .navbar a:hover {
-            background-color: #D4C1EC; /* Soft Lavender */
-            color: #4A4A4A; /* Cool Gray */
+            background-color: #0397e7;
+            color: #f8f8f8;
         }
-        .content {
-            padding: 20px;
-        }        
+    
+        h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+    
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        a {
+            color: #580ba0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+    
+        a:hover {
+            color: #E9C46A;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+        }
     </style>
 </head>
 <body>
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="fun.html">Fun</a>
-</div>
-<div class="content">
-    <h1>Welcome to Nav's World</h1>
-    <h3>Hello, I'm Nav!</h3>
-    <img src = "Images/passportphoto.jpg" alt = "Nav Pic" height= "auto" width = "200">
-    <p>Welcome to my personal corner of the internet! Whether you're here to discover what I'm passionate about, or explore the projects I'm working on, I'm glad you stopped by.</p>
-    <h3>Who Am I?</h3>
-    <p>I'm a tech enthusiast with a deep love for coding, AI, and all things innovative. When I'm not immersed in the latest tech project, you'll find me exploring new interests, reading captivating books, or diving into the vibrant world of anime. My curiosity drives me to continuously learn and evolve, whether it's mastering a new programming language or discovering a new genre of stories.</p>
-</div>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="Images/passportphoto.jpg" alt="Nav Sanya Anand Logo" width="60"></a>
+            <h1>Nav Sanya Anand</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">Professional Profile</a>
+            <a href="fun.html">Fun</a>
+        </div>
+        <div class="content">
+            <h3>Hey there, I'm Nav Sanya Anand!</h3>
+            <p>You’ve just stumbled upon the fun zone! Here, we mix a bit of tech with a lot of personality. Whether you're curious about my quirky hobbies or looking for a laugh, you're in the right place!</p>
+            <h3>Who is Nav?</h3>
+            <p>Let’s break it down: I’m a tech geek by day, an anime binge-watcher by night, and a curious explorer of life 24/7. I love diving into the world of code and AI, but when I'm not doing that, you might catch me experimenting with the latest meme format or attempting to perfect my ramen recipe.</p>
+            <h3>Fun Facts About Me:</h3>
+            <ul>
+                <li><strong>Anime Lover:</strong> My current obsession? <i>Demon Slayer</i> and <i>My Hero Academia</i>. Don’t get me started on the epic battles!</li>
+                <li><strong>Foodie on a Mission:</strong> My quest? To find the best food in town (or make it myself!).</li>
+                <li><strong>Curiosity Enthusiast:</strong> If it’s new and exciting, I’m probably into it—whether it’s a cutting-edge tech trend or the latest Netflix series.</li>
+            </ul>
+            <p>This is just a sneak peek into my world. Stay tuned for more fun, more laughs, and maybe even a few surprises. Let’s make the internet a little more awesome together!</p>
+        </div>
+    </div>
 </body>
 </html>

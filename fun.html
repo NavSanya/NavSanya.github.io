@@ -4,72 +4,101 @@
     <title>Fun - Nav Sanya Anand</title>
     <style>
         body {
-            background-color: #E6F5F1; /* Light Mint */
-            font-family: Arial, sans-serif;
-        }
-
-        .tabs {
-            overflow: hidden;
-            background: #647AA3; /* Slate Blue */
             margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .tabs li {
-            float: left;
-        }
-
-        .tabs a {
-            display: block;
-            padding: 10px 20px;
-            color: white;
-            text-decoration: none;
-        }
-
-        .tabs a:hover, .tabs a.active {
-            background: #D4C1EC; /* Soft Lavender */
-        }
-
-        .tab-content {
-            display: none;
+            font-family: 'Roboto';
+            background: linear-gradient(90deg, #bd91ec, #fbb793, #f1aed5);
+            background-size: 600% 600%;
+            animation: gradientAnimation 12s ease infinite;
+            color: #333;
             padding: 20px;
-            background: #FFFFFF; /* White */
-            clear: both;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
         }
 
-        .tab-content.active {
-            display: block;
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    
+        .container {
+            background-color: white;
+            max-width: 900px;
+            margin-top: 20px;
+            padding: 40px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
         }
 
-        #section1 {
-            background-color: #D4C1EC; /* Soft Lavender */
-            font-size: 0.7em;
-            text-align: center;
-            height: 120px;
-            width: 300px;
-            margin-top: auto;
-            margin-left: auto;
-            margin-right: auto;
-            box-sizing: border-box;
-            padding: 10px;
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .logo h1 {
+            font-size: 1.5em;
+            color: #141893;
+            margin: 0;
+        }
+    
+        .navbar {
+            overflow: hidden;
+            background-color: #0043b8;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    
+        .navbar a {
             float: left;
-        }
-
-        .clearfloat {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .center {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            outline-style: double;
-            outline-width: 5px;
-            border-color: #4A4A4A; /* Cool Gray */
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
+    
+        .navbar a:hover {
+            background-color: #0397e7;
+            color: #f8f8f8;
+        }
+    
+        h1, h2, h3, h4, h5 {
+            color: #0d127a;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        a {
+            color: #580ba0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+    
+        a:hover {
+            color: #E9C46A;
+        }   
 
         .side-by-side {
             display: inline-block;
@@ -87,34 +116,60 @@
             display: table;
             clear: both;
         }
-
-        .container {
-            overflow: auto;
-        }
-
-        .navbar {
+        
+        .tabs {
             overflow: hidden;
-            background-color: #647AA3; /* Slate Blue */
+            background-color: #F1FAEE;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .navbar a {
+        .tabs li {
             float: left;
-            display: block;
-            color: white;
+            width: 14.2857%; /* Each tab takes up an equal portion of the width */
             text-align: center;
-            padding: 14px 20px;
+        }
+
+        .tabs a {
+            display: block;
+            padding: 15px 10px;
+            color: #1D3557; /* Darker text color */
             text-decoration: none;
+            background-color: #FFFFFF;
+            border-radius: 10px 10px 0 0;
         }
 
-        .navbar a:hover {
-            background-color: #D4C1EC; /* Soft Lavender */
-            color: #4A4A4A; /* Cool Gray */
+        .tabs a:hover, .tabs a.active {
+            background-color: #A8DADC;
+            color: #1D3557;
         }
 
-        .content {
+        .tab-content {
+            display: none;
             padding: 20px;
+            background: #FFFFFF;
+            clear: both;
+            border-radius: 0 10px 10px 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            color: #251439;
         }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
     </style>
+    
 </head>
 
 <script>
@@ -138,49 +193,58 @@
 </script>
 
 <body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="fun.html" class="active">Fun</a>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html"><img src="Images/passportphoto.jpg" alt="Nav Sanya Anand Logo" width="60"></a>
+            <h1>Nav Sanya Anand</h1>
+        </div>
     </div>
-    <div id="section2">
-        <h1>Fun</h1>
-    </div>
-    
-    <ul class="tabs">
-        <li><a href="#books" class="active">Books</a></li>
-        <li><a href="#anime">Anime</a></li>
-    </ul>
-    
-    <div class="tab-content" id="books">
-        <h3>Welcome to My Reading Corner</h3>
-        <p>Hello, fellow book lovers! I'm thrilled to share my passion for reading with you. If you're like me, there's nothing quite like diving into a good book and getting lost in its world.</p>
-        <h5>My Ever-Evolving Taste in Books</h5>
-        <p>One thing you should know about me is that my taste in book genres is always evolving. From the heart-pounding thrill of mystery novels to the heartwarming tales of romance, I love exploring new literary worlds and discovering unique stories. Here are a few genres I currently enjoy:</p>
-                <ul>
-                <li>Fantasy: Enchanting realms, magical creat>ures, and epic adventures.</li>
-                <li>Science Fiction: Futuristic worlds, advanced technology, and thought-provoking themes.</li>
-                <li>Romance: Heartfelt stories, unforgettable characters, and swoon-worthy moments.</li>
-                <li>Historical Fiction: Richly detailed settings, intriguing historical events, and compelling narratives.</li>
-                </ul>
-        <h5>My Wattpad Reading Lists</h5>
-        <p>I believe that sharing our favorite reads is one of the best ways to connect with fellow readers. That's why I'm excited to share my Wattpad reading lists with you. On my Wattpad profile, you'll find carefully curated collections of stories that have captivated me, from hidden gems to popular favorites. Whether you're looking for a new series to binge or a standalone novel to enjoy, there's something for everyone.</p>
-        <p>You can check out my Wattpad reading lists <a href = "https://www.wattpad.com/user/NavSanya">here</a>.</p>
-    </div>
-    
-    <div class="tab-content" id="anime">
-        <h3>Exploring the World of Anime</h3>
-        <p>Recently, I've ventured into the fascinating world of anime, and it's quickly become a new passion of mine. There's something incredibly captivating about the way anime blends stunning visuals, compelling stories, and unforgettable characters. Whether it's the intensity of a battle scene or the depth of an emotional moment, anime has a unique way of telling stories that resonates with me.</p>
-        <h5>Anime I'm Currently Watching</h5>
-        <p>I'm excited to share the anime series I'm currently following. Each of these shows has drawn me in with its own unique charm:</p>
-        <ul>
-            <li><strong>Demon Slayer: Kimetsu no Yaiba - Season 4:</strong> The breathtaking animation and emotional story arcs have made this series a favorite of mine.</li>
-            <li><strong>My Hero Academia: Boku no Hero Academia - Season 7:</strong> The growth of the characters and the epic battles keep me hooked on every episode.</li>
-            <li><strong>Dr. Stone - Season 3 Part 2:</strong> The blend of science and adventure in this series is both educational and entertaining.</li>
-            <li><strong>Tadaima, Okaeri:</strong> A heartfelt story that touches on themes of family, love, and acceptance.</li>
-            <li><strong>Fairy Tail:</strong> The camaraderie among the characters and the magic-filled adventures make this a classic that I’m thoroughly enjoying.</li>
+
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">Professional Profile</a>
+            <a href="fun.html" class="active">Fun</a>
+        </div>
+        <div id="section2">
+            <h1>Fun</h1>
+        </div>
+        
+        <ul class="tabs">
+            <li><a href="#books" class="active">Books</a></li>
+            <li><a href="#anime">Anime</a></li>
         </ul>
+        
+        <div class="tab-content" id="books">
+            <h3>Welcome to My Reading Corner</h3>
+            <p>Hello, fellow book lovers! I'm thrilled to share my passion for reading with you. If you're like me, there's nothing quite like diving into a good book and getting lost in its world.</p>
+            <h5>My Ever-Evolving Taste in Books</h5>
+            <p>One thing you should know about me is that my taste in book genres is always evolving. From the heart-pounding thrill of mystery novels to the heartwarming tales of romance, I love exploring new literary worlds and discovering unique stories. Here are a few genres I currently enjoy:</p>
+                    <ul>
+                    <li>Fantasy: Enchanting realms, magical creat>ures, and epic adventures.</li>
+                    <li>Science Fiction: Futuristic worlds, advanced technology, and thought-provoking themes.</li>
+                    <li>Romance: Heartfelt stories, unforgettable characters, and swoon-worthy moments.</li>
+                    <li>Historical Fiction: Richly detailed settings, intriguing historical events, and compelling narratives.</li>
+                    </ul>
+            <h5>My Wattpad Reading Lists</h5>
+            <p>I believe that sharing our favorite reads is one of the best ways to connect with fellow readers. That's why I'm excited to share my Wattpad reading lists with you. On my Wattpad profile, you'll find carefully curated collections of stories that have captivated me, from hidden gems to popular favorites. Whether you're looking for a new series to binge or a standalone novel to enjoy, there's something for everyone.</p>
+            <p>You can check out my Wattpad reading lists <u><a href = "https://www.wattpad.com/user/NavSanya">here</a></u>.</p>
+        </div>
+        
+        <div class="tab-content" id="anime">
+            <h3>Exploring the World of Anime</h3>
+            <p>Recently, I've ventured into the fascinating world of anime, and it's quickly become a new passion of mine. There's something incredibly captivating about the way anime blends stunning visuals, compelling stories, and unforgettable characters. Whether it's the intensity of a battle scene or the depth of an emotional moment, anime has a unique way of telling stories that resonates with me.</p>
+            <h5>Anime I'm Currently Watching</h5>
+            <p>I'm excited to share the anime series I'm currently following. Each of these shows has drawn me in with its own unique charm:
+            <ul>
+                <li><strong>Demon Slayer: Kimetsu no Yaiba - Season 4:</strong> The breathtaking animation and emotional story arcs have made this series a favorite of mine.</li>
+                <li><strong>My Hero Academia: Boku no Hero Academia - Season 7:</strong> The growth of the characters and the epic battles keep me hooked on every episode.</li>
+                <li><strong>Dr. Stone - Season 3 Part 2:</strong> The blend of science and adventure in this series is both educational and entertaining.</li>
+                <li><strong>Tadaima, Okaeri:</strong> A heartfelt story that touches on themes of family, love, and acceptance.</li>
+                <li><strong>Fairy Tail:</strong> The camaraderie among the characters and the magic-filled adventures make this a classic that I’m thoroughly enjoying.</li>
+            </ul>
+            </p>
+        </div>
     </div>
-    
     </body>
     </html>
