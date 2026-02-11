@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fun - Nav Sanya Anand</title>
+
+    <!-- Roboto font (actually loads it) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <style>
+        * { font-family: 'Times New Roman'; }
+
         body {
             margin: 0;
-            font-family: 'Roboto';
-            background: linear-gradient(90deg, #bd91ec, #fbb793, #f1aed5);
-            background-size: 600% 600%;
-            animation: gradientAnimation 12s ease infinite;
+            background: linear-gradient(120deg, #a978f6, #ffb18b, #f39acb);
+            background-size: 900% 900%;
+            animation: gradientAnimation 10s ease-in-out infinite;
             color: #333;
             padding: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center; 
+            align-items: center;
         }
 
         @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+            0%   { background-position: 0% 50%; }
+            25%  { background-position: 50% 0%; }
+            50%  { background-position: 100% 50%; }
+            75%  { background-position: 50% 100%; }
             100% { background-position: 0% 50%; }
         }
-    
+
         .container {
             background-color: white;
             max-width: 900px;
@@ -31,30 +42,38 @@
             border-radius: 12px;
         }
 
+        /* Header (match about.html style) */
         .header {
             width: 100%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             padding-bottom: 20px;
         }
 
         .logo {
             display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
         }
 
-        .logo img {
+        .logo img.profile-photo {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
             border-radius: 50%;
-            margin-right: 20px;
+            margin-bottom: 12px;
+            display: block;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
         .logo h1 {
-            font-size: 1.5em;
+            font-size: 2.2em;
             color: #141893;
             margin: 0;
         }
-    
+
         .navbar {
             overflow: hidden;
             background-color: #0043b8;
@@ -63,7 +82,7 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
-    
+
         .navbar a {
             float: left;
             display: block;
@@ -72,51 +91,21 @@
             padding: 14px 20px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            font-weight: 500;
         }
-    
+
         .navbar a:hover {
             background-color: #0397e7;
             color: #f8f8f8;
         }
-    
-        h1, h2, h3, h4, h5 {
-            color: #0d127a;
-        }
 
-        p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-    
-        a {
-            color: #580ba0;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-    
-        a:hover {
-            color: #E9C46A;
-        }   
+        h1, h2, h3, h4, h5 { color: #0d127a; }
 
-        .side-by-side {
-            display: inline-block;
-            width: calc(50% - 20px);
-            margin-right: 20px;
-            margin-bottom: 20px;
-            background-color: #FFFFFF; /* White */
-            box-sizing: border-box;
-            padding: 10px;
-            float: left;
-        }
+        p { color: #555; line-height: 1.6; margin-bottom: 20px; }
 
-        .container::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
+        a { color: #580ba0; text-decoration: none; font-weight: 700; transition: color 0.3s ease; }
+        a:hover { color: #E9C46A; }
+
         .tabs {
             overflow: hidden;
             background-color: #F1FAEE;
@@ -127,19 +116,16 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .tabs li {
-            float: left;
-            width: 14.2857%; /* Each tab takes up an equal portion of the width */
-            text-align: center;
-        }
+        .tabs li { float: left; width: 50%; text-align: center; }
 
         .tabs a {
             display: block;
             padding: 15px 10px;
-            color: #1D3557; /* Darker text color */
+            color: #1D3557;
             text-decoration: none;
             background-color: #FFFFFF;
             border-radius: 10px 10px 0 0;
+            font-weight: 500;
         }
 
         .tabs a:hover, .tabs a.active {
@@ -157,45 +143,19 @@
             color: #251439;
         }
 
-        .tab-content.active {
-            display: block;
-        }
+        .tab-content.active { display: block; }
 
-        img {
-            border-radius: 50%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            display: block;
+        @media (max-width: 600px) {
+            .logo img.profile-photo { width: 110px; height: 110px; }
+            .logo h1 { font-size: 1.6em; }
         }
-
     </style>
-    
 </head>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var tabs = document.querySelectorAll('.tabs a');
-        var contents = document.querySelectorAll('.tab-content');
-
-        tabs.forEach(function (tab, index) {
-            tab.addEventListener('click', function (e) {
-                e.preventDefault();
-                tabs.forEach(function (t) { t.classList.remove('active'); });
-                tab.classList.add('active');
-                contents.forEach(function (content) { content.classList.remove('active'); });
-                contents[index].classList.add('active');
-            });
-        });
-
-        // Activate the first tab by default
-        tabs[0].click();
-    });
-</script>
 
 <body>
     <div class="header">
         <div class="logo">
-            <a href="index.html"><img src="Images/passportphoto.jpg" alt="Nav Sanya Anand Logo" width="60"></a>
+            <a href="index.html"><img class="profile-photo" src="Images/passportphoto.jpg" alt="Nav Sanya Anand Photo"></a>
             <h1>Nav Sanya Anand</h1>
         </div>
     </div>
@@ -206,45 +166,70 @@
             <a href="about.html">Professional Profile</a>
             <a href="fun.html" class="active">Fun</a>
         </div>
+
         <div id="section2">
             <h1>Fun</h1>
         </div>
-        
+
         <ul class="tabs">
             <li><a href="#books" class="active">Books</a></li>
             <li><a href="#anime">Anime</a></li>
         </ul>
-        
+
         <div class="tab-content" id="books">
             <h3>Welcome to My Reading Corner</h3>
-            <p>Hello, fellow book lovers! I'm thrilled to share my passion for reading with you. If you're like me, there's nothing quite like diving into a good book and getting lost in its world.</p>
+            <p>Hello, fellow book lovers! I'm thrilled to share my passion for reading with you.</p>
+
             <h5>My Ever-Evolving Taste in Books</h5>
-            <p>One thing you should know about me is that my taste in book genres is always evolving. From the heart-pounding thrill of mystery novels to the heartwarming tales of romance, I love exploring new literary worlds and discovering unique stories. Here are a few genres I currently enjoy:</p>
-                    <ul>
-                    <li>Fantasy: Enchanting realms, magical creat>ures, and epic adventures.</li>
-                    <li>Science Fiction: Futuristic worlds, advanced technology, and thought-provoking themes.</li>
-                    <li>Romance: Heartfelt stories, unforgettable characters, and swoon-worthy moments.</li>
-                    <li>Historical Fiction: Richly detailed settings, intriguing historical events, and compelling narratives.</li>
-                    </ul>
+            <p>My taste in book genres is always evolving. Here are a few genres I currently enjoy:</p>
+            <ul>
+                <li>Fantasy</li>
+                <li>Science Fiction</li>
+                <li>Romance</li>
+                <li>Historical Fiction</li>
+            </ul>
+
             <h5>My Wattpad Reading Lists</h5>
-            <p>I believe that sharing our favorite reads is one of the best ways to connect with fellow readers. That's why I'm excited to share my Wattpad reading lists with you. On my Wattpad profile, you'll find carefully curated collections of stories that have captivated me, from hidden gems to popular favorites. Whether you're looking for a new series to binge or a standalone novel to enjoy, there's something for everyone.</p>
-            <p>You can check out my Wattpad reading lists <u><a href = "https://www.wattpad.com/user/NavSanya">here</a></u>.</p>
+            <p>You can check out my Wattpad reading lists <u><a href="https://www.wattpad.com/user/NavSanya">here</a></u>.</p>
         </div>
-        
+
         <div class="tab-content" id="anime">
             <h3>Exploring the World of Anime</h3>
-            <p>Recently, I've ventured into the fascinating world of anime, and it's quickly become a new passion of mine. There's something incredibly captivating about the way anime blends stunning visuals, compelling stories, and unforgettable characters. Whether it's the intensity of a battle scene or the depth of an emotional moment, anime has a unique way of telling stories that resonates with me.</p>
+            <p>Recently, I've ventured into the fascinating world of anime, and it's quickly become a new passion of mine.</p>
+
             <h5>Anime I'm Currently Watching</h5>
-            <p>I'm excited to share the anime series I'm currently following. Each of these shows has drawn me in with its own unique charm:
             <ul>
-                <li><strong>Demon Slayer: Kimetsu no Yaiba - Season 4:</strong> The breathtaking animation and emotional story arcs have made this series a favorite of mine.</li>
-                <li><strong>My Hero Academia: Boku no Hero Academia - Season 7:</strong> The growth of the characters and the epic battles keep me hooked on every episode.</li>
-                <li><strong>Dr. Stone - Season 3 Part 2:</strong> The blend of science and adventure in this series is both educational and entertaining.</li>
-                <li><strong>Tadaima, Okaeri:</strong> A heartfelt story that touches on themes of family, love, and acceptance.</li>
-                <li><strong>Fairy Tail:</strong> The camaraderie among the characters and the magic-filled adventures make this a classic that I’m thoroughly enjoying.</li>
+                <li><strong>Demon Slayer</strong></li>
+                <li><strong>My Hero Academia</strong></li>
+                <li><strong>Dr. Stone</strong></li>
+                <li><strong>Tadaima, Okaeri</strong></li>
+                <li><strong>Fairy Tail</strong></li>
             </ul>
-            </p>
         </div>
     </div>
-    </body>
-    </html>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var tabs = document.querySelectorAll('.tabs a');
+            var contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    tabs.forEach(function (t) { t.classList.remove('active'); });
+                    tab.classList.add('active');
+                    contents.forEach(function (content) { content.classList.remove('active'); });
+
+                    var href = tab.getAttribute('href');
+                    if (href && href.charAt(0) === '#') {
+                        var target = document.querySelector(href);
+                        if (target) target.classList.add('active');
+                    }
+                });
+            });
+
+            if (tabs[0]) tabs[0].click();
+        });
+    </script>
+</body>
+</html>

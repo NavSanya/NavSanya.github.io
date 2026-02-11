@@ -1,381 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Profile - Nav Sanya Anand</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto';
-            background: linear-gradient(90deg, #bd91ec, #fbb793, #f1aed5);
-            background-size: 600% 600%;
-            animation: gradientAnimation 12s ease infinite;
-            color: #333;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Profile - Nav Sanya Anand</title>
 
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+  <!-- Roboto font (actually loads it) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-        .container {
-            background-color: white;
-            max-width: 900px;
-            margin-top: 20px;
-            padding: 40px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-        }
+  <style>
+      * { font-family: 'Times New Roman'; }
 
-        .header {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding-bottom: 20px;
-        }
+    body {
+      margin: 0;
+      background: linear-gradient(120deg, #a978f6, #ffb18b, #f39acb);
+      background-size: 900% 900%;
+      animation: gradientAnimation 10s ease-in-out infinite;
+      color: #333;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+    @keyframes gradientAnimation {
+      0%   { background-position: 0% 50%; }
+      25%  { background-position: 50% 0%; }
+      50%  { background-position: 100% 50%; }
+      75%  { background-position: 50% 100%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        .logo img {
-            border-radius: 50%;
-            margin-right: 20px;
-        }
+    .container {
+      background-color: white;
+      max-width: 900px;
+      margin-top: 20px;
+      padding: 40px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
 
-        .logo h1 {
-            font-size: 1.5em;
-            color: #141893;
-            margin: 0;
-        }
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20px;
+    }
 
-        .navbar {
-            overflow: hidden;
-            background-color: #0043b8;
-            padding: 10px 20px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-    
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-    
-        .navbar a:hover {
-            background-color: #0397e7;
-            color: #f8f8f8;
-        }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-        .tabs {
-            overflow: hidden;
-            background-color: #F1FAEE;
-            margin: 20px 0;
-            padding: 0;
-            list-style: none;
-            border-radius: 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        }
+    .logo img.profile-photo {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      display: block;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
 
-        .tabs li {
-            float: left;
-            width: 14.2857%; /* Each tab takes up an equal portion of the width */
-            text-align: center;
-        }
+    .logo h1 {
+      font-size: 2.2em;
+      color: #141893;
+      margin: 0;
+    }
 
-        .tabs a {
-            display: block;
-            padding: 15px 10px;
-            color: #1D3557; /* Darker text color */
-            text-decoration: none;
-            background-color: #FFFFFF;
-            border-radius: 10px 10px 0 0;
-        }
+    .navbar {
+      overflow: hidden;
+      background-color: #0043b8;
+      padding: 10px 20px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
 
-        .tabs a:hover, .tabs a.active {
-            background-color: #A8DADC;
-            color: #1D3557;
-        }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-weight: 500;
+    }
 
-        .tab-content {
-            display: none;
-            padding: 20px;
-            background: #FFFFFF;
-            clear: both;
-            border-radius: 0 10px 10px 10px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            color: #251439;
-        }
+    .navbar a:hover {
+      background-color: #0397e7;
+      color: #f8f8f8;
+    }
 
-        .tab-content.active {
-            display: block;
-        }
+    .tabs {
+      overflow: hidden;
+      background-color: #F1FAEE;
+      margin: 20px 0;
+      padding: 0;
+      list-style: none;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
+    .tabs li { float: left; width: 16.6667%; text-align: center; }
+    .tabs a {
+      display: block;
+      padding: 15px 10px;
+      color: #1D3557;
+      text-decoration: none;
+      background-color: #FFFFFF;
+      border-radius: 10px 10px 0 0;
+      font-weight: 500;
+    }
 
-        h1, h2, h3, h4, h5 {
-            color: #0d127a;
-        }
+    .tabs a:hover, .tabs a.active { background-color: #A8DADC; color: #1D3557; }
 
-        p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-    
-        a {
-            color: #580ba0;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-    
-        a:hover {
-            color: #E9C46A;
-        }   
-        
-        img {
-            border-radius: 50%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            display: block;
-        }
-        
-    </style>
-    
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background: #FFFFFF;
+      clear: both;
+      border-radius: 0 10px 10px 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      color: #251439;
+    }
+
+    .tab-content.active { display: block; }
+
+    h1, h2, h3, h4, h5 { color: #0d127a; }
+
+    p { color: #555; line-height: 1.6; margin-bottom: 16px; }
+
+    a { color: #580ba0; text-decoration: none; font-weight: 700; transition: color 0.3s ease; }
+    a:hover { color: #E9C46A; }
+
+    .school { display: flex; align-items: center; gap: 18px; margin: 18px 0; }
+
+    /* Badge-style logo circles (no cropping) */
+    .school img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      display: block;
+    }
+
+    .school .school-info { flex: 1; min-width: 0; }
+
+    .experience-list { margin: 0 0 18px 0; padding-left: 1.15rem; }
+
+    .skill-pill {
+      display: inline-block;
+      background: #F1FAEE;
+      color: #1D3557;
+      padding: 6px 10px;
+      margin: 6px 6px 0 0;
+      border-radius: 16px;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 700px) { .tabs li { width: 50%; } }
+    @media (max-width: 600px) {
+      .logo img.profile-photo { width: 110px; height: 110px; }
+      .logo h1 { font-size: 1.6em; }
+      .school { gap: 12px; }
+      .school img { width: 72px; height: 72px; }
+    }
+  </style>
 </head>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var tabs = document.querySelectorAll('.tabs a');
-            var contents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach(function (tab, index) {
-                tab.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    tabs.forEach(function (t) { t.classList.remove('active'); });
-                    tab.classList.add('active');
-                    contents.forEach(function (content) { content.classList.remove('active'); });
-                    contents[index].classList.add('active');
-                });
-            });
-
-            // Activate the first tab by default
-            tabs[0].click();
-        });
-    </script>
-</head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <a href="index.html"><img src="Images/passportphoto.jpg" alt="Nav Sanya Anand Logo" width="60"></a>
-            <h1>Nav Sanya Anand</h1>
-        </div>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img class="profile-photo" src="Images/passportphoto.jpg" alt="Nav Sanya Anand Photo">
+      </a>
+      <h1>Nav Sanya Anand</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">Professional Profile</a>
+      <a href="fun.html">Fun</a>
     </div>
 
-    <div class="container">
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">Professional Profile</a>
-            <a href="fun.html">Fun</a>
-        </div>
-        
+
     <div id="section2">
-        <h1>Nav Sanya Anand</h1>
-        <p>Results-oriented and highly motivated professional with a master’s in computer science. A candidate with a strong foundation in data science and machine learning, backed by a bachelor’s degree in computer science. Proven expertise in back-end development, and web design, and extensive experience in leading and contributing to diverse projects. Adept at collaborating with cross-functional teams and leveraging technical skills for impactful contributions. Seeking opportunities to apply knowledge and skills in a dynamic and challenging environment.</p>
-        <p><u><a href="mailto:anandnavsanya@gmail.com">anandnavsanya@gmail.com</a></u></p>
-        <p><u><a href="https://www.linkedin.com">LinkedIn</a></u></p>
-        <p><u><a href="https://www.github.com">GitHub</a></u></p>
+      <h3>SUMMARY</h3>
+      <p>
+        Data science and analytics professional with dual Master’s degrees (Computer Science — Data Science; Business Analytics).
+        Experienced building end-to-end data products: SQL/Python pipelines, ML models, and Tableau dashboards for stakeholders.
+        Strong foundation in statistical modeling, machine learning, and backend development, with research exposure in multi-agent reinforcement learning.
+        Comfortable translating business questions into measurable experiments and clear recommendations.
+      </p>
+      <p><u><a href="mailto:anandnavsanya@gmail.com">anandnavsanya@gmail.com</a></u></p>
+      <p><u><a href="https://www.linkedin.com">LinkedIn</a></u></p>
+      <p><u><a href="https://www.github.com">GitHub</a></u></p>
     </div>
 
     <ul class="tabs">
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#extracurricular">Extra Curricular</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#awards">Awards & Honors</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#extracurricular">Extra Curricular</a></li>
+      <li><a href="#credentials">Certifications & Awards</a></li>
     </ul>
 
     <div class="tab-content" id="education">
-        <h3>EDUCATION</h3>
-        <h4>University Of Southern California — Master of Science (Computer Science-Data Science)</h4>
-        <img src="Images/USC_logo.png" alt="USC Logo" width="60">
-        <p>August 2022 - May 2024</p>
-        <p>Relevant Coursework: Analysis of Algorithms, Database Systems, Foundations of AI, Machine Learning, Foundations and Applications of Data Mining, Data Management, Applied NLP</p>
-        <p>Extracurricular Activities: Sikh Student Association Member, Association of Indian Students Member</p>
+      <h3>EDUCATION</h3>
 
-        <h4>California State University, Fresno — Bachelor of Science (Computer Science)</h4>
-        <img src="Images/Fresnostate_logo.png" alt="Fresno State Logo" width="80">
-        <p>August 2018 - December 2021</p>
-        <p>Relevant Coursework: Algorithms and Data Structures, Database Systems, Simulation, Artificial Intelligence, Bio-Inspired Machine Learning, Internetworking Systems and Protocols, Parallel Programming</p>
-        <p>Extracurricular Activities: International Ambassador 2021, Computer Science Club President and Founder 2021</p>
+      <div class="school">
+	  <img src="Images/Calpoly_logo.jpg" alt="Cal Poly Logo" class="calpoly-logo">        <div class="school-info">
+          <h4>California Polytechnic State University, San Luis Obispo, CA</h4>
+          <p><strong>Master of Science, Business Analytics</strong> — Aug 2025 - Jun 2026</p>
+          <p>Relevant Coursework: Essential Statistics, Data Management, Data Analytics & Mining, Machine Learning for Business.</p>
+        </div>
+      </div>
+
+      <div class="school">
+        <img src="Images/USC_logo.png" alt="USC Logo">
+        <div class="school-info">
+          <h4>University of Southern California, Los Angeles, CA</h4>
+          <p><strong>Master of Science, Computer Science (Data Science)</strong> — Aug 2022 - May 2024</p>
+          <p>Relevant Coursework: Algorithms, Database Systems, Foundations of AI, Machine Learning, Applied NLP.</p>
+        </div>
+      </div>
+
+      <div class="school">
+        <img src="Images/Fresnostate_logo.png" alt="Fresno State Logo">
+        <div class="school-info">
+          <h4>California State University, Fresno, CA</h4>
+          <p><strong>Bachelor of Science, Computer Science</strong> — Aug 2018 - Dec 2021</p>
+          <p>Relevant Coursework: Data Structures, Database Systems, Artificial Intelligence, Parallel Programming.</p>
+        </div>
+      </div>
     </div>
 
     <div class="tab-content" id="experience">
-        <h3>INDUSTRIAL EXPERIENCE</h3>
-        
-        <h4>Green International, Remote — Digital Technology Manager (Part-Time)</h4>
-        <p>May 2021 - Present</p>
-        <p>Developed interactive dashboards and automated reports using Tableau, Python, and SQL, enabling data-driven decision-making and reducing manual reporting efforts.</p> 
-        <p>Designed and maintained dynamic web applications using HTML, CSS, JavaScript improving system functionality and user experience. </p>
-        <p>Automated data processing workflows with Python and Excel VBA, significantly reducing manual work and improving operational efficiency.</p>
-        <p>Optimized database queries and data pipelines using SQL and Pandas, ensuring efficient data retrieval and analysis.</p>
-        <p>Implemented cloud-based solutions for data storage and accessibility, enhancing collaboration and remote work capabilities. </p>
-        <p>Worked cross-functionally with teams to develop and deploy technology-driven solutions, streamlining business operations and improving productivity. </p>
-        <p><u><a href="https://www.greenauto.co.in/" target="_blank">Green Auto</a></u></p>
-        
-        <h4>Green International, Remote — Digital Technology Manager (Part-Time)</h4>
-        <p>May 2021 - Present</p>
-        <p>Built interactive dashboards and reports using Tableau to provide actionable insights, improving business decision-making.</p>
-        <p>Designed and maintained the company’s website, implementing SEO strategies to enhance visibility and usability. </p>
-        <p>Responsible for website development and management, ensuring functionality, usability, and visual appeal. </p>
-        <p>Collaborated with various departments to integrate technology solutions that streamline processes and enhance efficiency. </p>
-        <p><u><a href="http://greeninternational.co.in/" target="_blank">Green International</a></u></p>
-        
-        <h4>Arthasarathi, Mumbai, India — Back End Development Intern</h4>
-        <p>April 2022 - July 2022</p>
-        <p>Collaborated with the product and marketing team to develop the website using the Spring Boot framework.</p>
-        <p>Designed, analyzed, developed, tested, deployed, and supported website phases.</p>
-        <p>Updated and maintained the MySQL database server.</p>
-        <p>Resolved ongoing issues, added new features, and provided end-to-end support.</p>
-        <p><u><a href="https://www.arthasarathi.com/" target="_blank">Arthasarathi</a></u></p>
+      <h3>INDUSTRIAL EXPERIENCE</h3>
 
-        
+	  <h4>Graduate Analytics Consultant — Industry-Sponsored Project (NDA)</h4>
+      <p>Jan 2026 – June 2026</p>
+      <ul class="experience-list">
+        <li>Created simulation + analytics workflows in Python to evaluate data-center energy efficiency using climate and cost variables.</li>
+        <li>Performed scenario and sensitivity analysis to compare regions and stress-test assumptions under weather variability.</li>
+        <li>Delivered reproducible notebooks, clear visualizations, and stakeholder-ready recommendations.</li>
+      </ul>
+	  
+      <h4>Digital Technology & Data Analytics Lead — Green International Auto, Inc., Fresno, CA</h4>
+      <p>Aug 2024 – Jul 2025</p>
+      <ul class="experience-list">
+        <li>Built executive-ready Tableau dashboards and automated reporting workflows to improve visibility into sales and operations.</li>
+        <li>Developed Python & SQL pipelines for cleaning, transforming, and analyzing operational datasets; standardized KPIs and reporting cadence.</li>
+        <li>Automated recurring data processing and Excel/VBA tasks to reduce manual effort and improve accuracy.</li>
+        <li>Partnered with stakeholders to translate business needs into measurable analytics deliverables and iterate quickly.</li>
+      </ul>
+      <p><u><a href="https://www.greenauto.co.in/" target="_blank">Green Auto</a></u></p>
+
+      <h4>Backend Development Intern — Arthasarathi, Mumbai, India</h4>
+      <p>Apr 2022 – Jul 2022</p>
+      <ul class="experience-list">
+        <li>Developed backend services using Spring Boot and MySQL to support product features and web application workflows.</li>
+        <li>Designed and optimized database schemas and queries to improve performance and reliability.</li>
+        <li>Implemented features, fixed defects, and supported releases through testing and production validation.</li>
+      </ul>
+      <p><u><a href="https://www.arthasarathi.com/" target="_blank">Arthasarathi</a></u></p>
     </div>
 
     <div class="tab-content" id="projects">
-        <h3>ACADEMIC and PERSONAL PROJECTS</h3>
+      <h3>RESEARCH & SELECTED PROJECTS</h3>
 
-        <h4>LLM Performance Enhancement Project</h4>
-        <p><strong>Technologies:</strong> Python, Jupyter, Google Collab, VS Code, GitHub – (USC)</p>
-        <p><strong>Project description:</strong> Investigated enhancing Large Language Models (LLMs) performance on Non-Latin script tasks, such as Hindi and Korean, inspired by the ROMANSETU paper. Explored fine-tuning LLMs with romanized data to improve performance and inference efficiency for tasks like translation and sentiment analysis on Hindi and Korean text.</p>
-        <p><u><a href="https://github.com/NavSanya/CSCI544_Project_Romansetu" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Led the project, overseeing data curation and experimentation. Collaborated with team members on implementation and evaluation. Presented findings and insights from experiments.</p>
+      <h4>Multi-Agent Reinforcement Learning & Ethical AI (Graduate Research)</h4>
+      <p>Designing MARL simulations with ethical constraints and running experiments to study arms-race dynamics and social-welfare tradeoffs.</p>
 
-        <h4>My Relational Database</h4>
-        <p><strong>Technologies:</strong> Python, Jupyter, Google Collab, VS Code, GitHub – (USC)</p>
-        <p><strong>Project description:</strong> Python-based database management system featuring a user-friendly command-line interface. It supports key functionalities such as data retrieval, table joining, aggregation, data insertion, table creation, data updating, row deletion, and table display. The system is designed for simplicity, efficiency, and real-world data exploration using the IMDB Top 250 Movies dataset.</p>
-        <p><u><a href="https://github.com/NavSanya/MyRelationalDatabase" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Implemented core database functionalities, query language processor, and user-friendly CLI. Conducted testing, debugging, and optimization for real-world data exploration.</p>
+      <h4>LLM Performance Enhancement for Non-Latin Scripts</h4>
+      <p>Implemented romanization-based experiments to improve LLM performance on Hindi/Korean tasks; built modular evaluation workflows.</p>
 
-        <h4>Sequence Alignment</h4>
-        <p><strong>Technologies:</strong> Java, VS Code, GitHub – (USC)</p>
-        <p><strong>Project description:</strong> Collaboratively worked on the implementation of the Sequence alignment algorithm used in computational biology. Dynamic Programming implementation using M x N memory. Divide and Conquer solution using twice the computational time but reducing the memory space required by a factor of at least a billion (concerning actual DNA inputs).</p>
-        <p><u><a href="https://github.com/NavSanya/CSCI570SequenceAlignmentProj" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Implemented the Divide and conquer solution. Testing and documenting the result.</p>
-
-        <h4>Geospatial Data Handling</h4>
-        <p><strong>Technologies:</strong> KML, SQL, HTML, GitHub – (USC)</p>
-        <p><strong>Project description:</strong> Work with spatial data - you will collect/create (generate/sample) your spatial data, visualize it, do queries on it, and visualize the query results.</p>
-        <p><u><a href="https://github.com/NavSanya/CSCI585_Geospatial_Data_Handling" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Implemented spatial data handling, visualization, and query functionalities.</p>
-
-        <h4>Algorithms and Data Structures</h4>
-        <p><strong>Technologies:</strong> Python3, Java, C++, VS Code, GitHub</p>
-        <p><strong>Project description:</strong> Find the difference in Implementation written in Python, Java, and C++ of different algorithms and data structures: Comparison Sorts, Non-Comparison Sorts, Heaps, Linked List, Hash Tables, Graphs.</p>
-        <p><u><a href="https://github.com/NavSanya/Algorithms_DataStructures" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Developed implementations in Python, Java, and C++ for various algorithms and data structures.</p>
-
-        <h4>ENNTS</h4>
-        <p><strong>Technologies:</strong> Python3, Jupyter Notebook, GitHub – (CSU FRESNO)</p>
-        <p><strong>Project description:</strong> How long does it take to “re-train” a Neural Network on a similar dataset? What similarity of datasets mean in this context? Understanding Meta-learning using Simple Datasets can Provide insights into the above questions.</p>
-        <p><u><a href="https://github.com/NavSanya/ENNTS" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Explored meta-learning using simple datasets and trained neural network models.</p>
-
-        <h4>Iris Classification using Decision Tree and Gaussian Naive Bayes</h4>
-        <p><strong>Technologies:</strong> Python3, Google Collab, GitHub – (CSU FRESNO)</p>
-        <p><strong>Project description:</strong> Collaboratively worked on Supervised Learning Predictive Modeling approach using Gaussian Naive Bayes and Decision Tree Classification Dataset containing the iris flower species which is used as the baseline when determining the accuracy of our trained models.</p>
-        <p><u><a href="https://github.com/NavSanya/IrisClassification-DT-GNU" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Led a team in supervised learning predictive modeling using Gaussian Naive Bayes and Decision Tree Classification.</p>
-
-        <h4>ML Sudoku Analysis</h4>
-        <p><strong>Technologies:</strong> Python3, Jupyter Notebook, GitHub – (CSU FRESNO)</p>
-        <p><strong>Project description:</strong> Collaboratively worked on the implementation and analysis of 30 Sudoku Puzzles solved using Evolutionary Algorithms, Simulated Annealing, and Satisfiability.</p>
-        <p><u><a href="https://github.com/NavSanya/ML-Sudoku-Analysis" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Led a team in the implementation and analysis of Sudoku puzzles solved using Evolutionary Algorithms, Simulated Annealing, and Satisfiability. Analyzed the results and documented my findings in a presentation.</p>
-
-        <h4>Parallel DFS and BFS using OpenMP</h4>
-        <p><strong>Technologies:</strong> C++, GitHub – (CSU FRESNO)</p>
-        <p><strong>Project description:</strong> Coding and Analyzing Breadth-First Search (BFS) and Depth-First Search (DFS) serially and parallelly (OpenMP).</p>
-        <p><u><a href="https://github.com/NavSanya/Parallel_DFS_BFS_OpenMp" target="_blank">GitHub Project</a></u></p>
-        <p><strong>My Role:</strong> Implemented Breadth-First Search (BFS) and Depth-First Search (DFS) serially and in parallel using OpenMP. Analyzed the results and documented my findings in a report.</p>
+      <h4>Relational Database System (Python)</h4>
+      <p>Built a Python-based relational DB engine supporting joins, aggregation, and query execution on the IMDB Top 250 dataset.</p>
     </div>
 
     <div class="tab-content" id="skills">
-        <h3>SKILLS</h3>
-        <p><strong>Programming Languages:</strong> Java, Python, C++, HTML, CSS</p>
-        <p><strong>Databases:</strong> MySQL, MongoDB, DynamoDB, JSON, XML, MS Access</p>
-        <p><strong>Tools & Platforms:</strong> Git, GitHub, Visual Studio, IntelliJ, Jupyter, Tableau, AWS EC2</p>
-        <p><strong>Libraries:</strong> Matplotlib, NumPy, PyTorch, Keras, TensorFlow, Pandas, Scikit-learn</p>
-        <p><strong>Other:</strong> Object-Oriented Programming (OOP), Data Analysis, Software Development, Microsoft Suite, Google Suite, Social Media Platforms</p>
-        <p><strong>Soft Skills:</strong> Strong Communication and Interpersonal Skills, Organization and Planning Skills, Analytical and Critical Thinking</p>
+      <h3>SKILLS</h3>
+
+      <h4>Programming & Data</h4>
+      <div>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">SQL</span>
+        <span class="skill-pill">Java</span>
+        <span class="skill-pill">C / C++</span>
+        <span class="skill-pill">HTML/CSS/JS</span>
+        <span class="skill-pill">Pandas</span>
+        <span class="skill-pill">NumPy</span>
+      </div>
+
+      <h4>Machine Learning & AI</h4>
+      <div>
+        <span class="skill-pill">Scikit-learn</span>
+        <span class="skill-pill">PyTorch</span>
+        <span class="skill-pill">TensorFlow</span>
+        <span class="skill-pill">Model Evaluation</span>
+        <span class="skill-pill">Feature Engineering</span>
+        <span class="skill-pill">NLP (Foundations)</span>
+        <span class="skill-pill">Multi-Agent RL (Research)</span>
+      </div>
+
+      <h4>Data Engineering & Databases</h4>
+      <div>
+        <span class="skill-pill">MySQL</span>
+        <span class="skill-pill">MongoDB</span>
+        <span class="skill-pill">DynamoDB</span>
+        <span class="skill-pill">Data Pipelines</span>
+        <span class="skill-pill">APIs</span>
+      </div>
+
+      <h4>Visualization & Reporting</h4>
+      <div>
+        <span class="skill-pill">Tableau</span>
+        <span class="skill-pill">Matplotlib</span>
+        <span class="skill-pill">Dashboarding</span>
+        <span class="skill-pill">Stakeholder Reporting</span>
+      </div>
+
+      <h4>Tools & Platforms</h4>
+      <div>
+        <span class="skill-pill">Git/GitHub</span>
+        <span class="skill-pill">Jupyter/Colab</span>
+        <span class="skill-pill">VS Code</span>
+        <span class="skill-pill">AWS EC2</span>
+      </div>
     </div>
 
-    <div class="tab-content" id="extracurriculars">
-        <h3>EXTRACURRICULAR ACTIVITIES</h3>
+    <div class="tab-content" id="extracurricular">
+      <h3>EXTRACURRICULAR ACTIVITIES</h3>
 
-        <h4>University of Southern California — TA at CS@SC</h4>
-        <p><strong>January 2024 - May 2024</strong></p>
-        <p>Developed strategies and built initiatives to meet the needs of a diverse population. Targeted various courses, such as Robotics, Web Development, and Scratch.</p>
+      <h4>University of Southern California — TA at CS@SC</h4>
+      <p><strong>Jan 2024 - May 2024</strong></p>
+      <p>Supported instruction across courses (Robotics, Web Development, Scratch) and created student-facing materials.</p>
 
-        <h4>California State University, Fresno — Computer Science Tutor</h4>
-        <p><strong>August 2019 - December 2021</strong></p>
-        <p>Conducted in-person and online tutoring sessions for groups of various sizes. Targeted various courses, such as Introduction to Programming, Algorithms and Data Structures, Foundations of Computer Science, and Introduction to Operating Systems. Participated in tutor training and development sessions through Zoom.</p>
+      <h4>California State University, Fresno — Founder & President, Computer Science Club</h4>
+      <p>Organized workshops/events, led meetings, managed communication and social presence, and partnered with faculty/staff.</p>
 
-        <h4>California State University, Fresno — Computer Science Grader</h4>
-        <p><strong>January 2021 - December 2021</strong></p>
-        <p>Graded student assignments and projects for the following courses: CSCI 40 - Introduction to Programming and Problem-solving, and CSCI 144/114 - Introduction to Operating Systems.</p>
-
-        <h4>President, Vice President — Computer Science Club – California State University, Fresno</h4>
-        <p><strong>My Role:</strong> The “external spokesperson” of the group who regularly interacts with other student organizations and University officials. Supervised all student organization meetings, oversaw the process of student organization event planning, scheduled locations for meetings and events, maintained communication between the student organization president and individual participants (including emails and phone calls), managed social media representation, and produced club newsletters.</p>
-
-        <h4>International Ambassador — California State University, Fresno</h4>
-        <p><strong>My Role:</strong> Guided international students throughout their first semester. Attended to international students' problems and concerns throughout the semester, aided with housing, campus life, and immigration, and oversaw the process of student organization event planning.</p>
+      <h4>International Ambassador — California State University, Fresno</h4>
+      <p>Guided incoming international students with housing, campus life, and onboarding.</p>
     </div>
 
+    <!-- COMBINED TAB: Certifications + Awards -->
+    <div class="tab-content" id="credentials">
+      <h3>CERTIFICATIONS</h3>
+      <p><strong>Cybersecurity for Data Science</strong> — University of Colorado Boulder (July 2023)</p>
+      <p><strong>Data Science Professional Certificate</strong> — IBM (October 2024)</p>
 
-    <div class="tab-content" id="certificates">
-        <h3>CERTIFICATES</h3>
-        <p><strong>Cybersecurity for Data Science</strong></p>
-        <p>Issued by: University of Colorado Boulder</p>
-        <p>Date Issued: July 2023</p>
-
-        <p><strong>Data Science Professional Certificate</strong></p>
-        <p>Issued by: IBM</p>
-        <p>Date Issued: October 2024</p>
+      <h3>AWARDS & HONORS</h3>
+      <p><strong>Outstanding International Student Award</strong> — California State University, Fresno (May 2021)</p>
+      <p><strong>President's List</strong> — California State University, Fresno (Fall 2018, Fall 2020)</p>
+      <p><strong>Dean’s List</strong> — California State University, Fresno (Spring 2019, Spring 2020, Spring 2021, Fall 2021)</p>
     </div>
+  </div>
 
-    <div class="tab-content" id="awards">
-        <h3>AWARDS & HONORS</h3>
-        <p><strong>Outstanding International Student Award</strong></p>
-        <p>California State University, Fresno</p>
-        <p>May 2021</p>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var tabs = document.querySelectorAll('.tabs a');
+      var contents = document.querySelectorAll('.tab-content');
 
-        <p><strong>President's List</strong></p>
-        <p>California State University, Fresno</p>
-        <p>Fall 2018, Fall 2020</p>
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function (e) {
+          e.preventDefault();
+          tabs.forEach(function (t) { t.classList.remove('active'); });
+          tab.classList.add('active');
+          contents.forEach(function (content) { content.classList.remove('active'); });
+          var href = tab.getAttribute('href');
+          if (href && href.charAt(0) === '#') {
+            var target = document.querySelector(href);
+            if (target) target.classList.add('active');
+          }
+        });
+      });
 
-        <p><strong>Dean’s List</strong></p>
-        <p>California State University, Fresno</p>
-        <p>Spring 2019, Spring 2020, Spring 2021, Fall 2021</p>
-
-        
-    </div>
-</div>
+      if (tabs[0]) tabs[0].click();
+    });
+  </script>
 </body>
 </html>
