@@ -122,6 +122,19 @@
         }
 
         a:hover { color: #E9C46A; }
+        
+        .art-gallery {
+    		display: flex;
+    	flex-wrap: wrap;
+   		gap: 15px;
+    	margin-top: 15px;
+		}
+
+		.art-gallery img {
+    		border-radius: 10px;
+    		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    		object-fit: cover;
+		}
     </style>
 </head>
 
@@ -142,44 +155,81 @@
 
         <div id="section2">
             <h1>Fun</h1>
-        </div>
+</div>
 
-        <ul class="tabs">
-            <li><a href="#books" class="active">Books</a></li>
-            <li><a href="#anime">Anime</a></li>
-        </ul>
+<ul class="tabs">
+    <li><a href="#books" class="active">Books</a></li>
+    <li><a href="#anime">Anime</a></li>
+    <li><a href="#art">Art</a></li>
+</ul>
 
-        <div class="tab-content" id="books">
-            <h3>Welcome to My Reading Corner</h3>
-            <p>Hello, fellow book lovers! I'm thrilled to share my passion for reading with you.</p>
+<div class="tab-content" id="books">
+    <h3>Welcome to My Reading Corner</h3>
+    <p>
+        Reading is one of my favorite ways to relax, explore new ideas, and step into different worlds.
+        My taste in books keeps growing, and I’m always excited to discover new stories and authors.
+    </p>
 
-            <h5>My Ever-Evolving Taste in Books</h5>
-            <p>My taste in book genres is always evolving. Here are a few genres I currently enjoy:</p>
-            <ul>
-                <li>Fantasy</li>
-                <li>Science Fiction</li>
-                <li>Romance</li>
-                <li>Historical Fiction</li>
-            </ul>
+    <h5>Genres I’m Loving Right Now</h5>
+    <p>Here are a few genres I currently enjoy the most:</p>
+    <ul>
+        <li>Fantasy</li>
+        <li>Science Fiction</li>
+        <li>Romance</li>
+        <li>Historical Fiction</li>
+    </ul>
 
-            <h5>My Wattpad Reading Lists</h5>
-            <p>You can check out my Wattpad reading lists <u><a href="https://www.wattpad.com/user/NavSanya">here</a></u>.</p>
-        </div>
+    <h5>My Reading Lists</h5>
+    <p>
+        I also keep track of stories and favorites on Wattpad.
+        You can explore my reading lists
+        <a href="https://www.wattpad.com/user/NavSanya" target="_blank">here</a>.
+    </p>
+</div>
 
-        <div class="tab-content" id="anime">
-            <h3>Exploring the World of Anime</h3>
-            <p>Recently, I've ventured into the fascinating world of anime, and it's quickly become a new passion of mine.</p>
+<div class="tab-content" id="anime">
+    <h3>Exploring the World of Anime</h3>
+    <p>
+        Anime has become one of my favorite ways to unwind and enjoy storytelling in a completely different style.
+        I love discovering new characters, emotional storylines, and visually beautiful worlds.
+    </p>
 
-            <h5>Anime I'm Currently Watching</h5>
-            <ul>
-                <li><strong>Demon Slayer</strong></li>
-                <li><strong>My Hero Academia</strong></li>
-                <li><strong>Dr. Stone</strong></li>
-                <li><strong>Tadaima, Okaeri</strong></li>
-                <li><strong>Fairy Tail</strong></li>
-            </ul>
-        </div>
+    <h5>Anime I’m Currently Watching</h5>
+    <ul>
+        <li><strong>Demon Slayer</strong></li>
+        <li><strong>My Hero Academia</strong></li>
+        <li><strong>Dr. Stone</strong></li>
+        <li><strong>Tadaima, Okaeri</strong></li>
+        <li><strong>Fairy Tail</strong></li>
+    </ul>
+</div>
+
+<div class="tab-content" id="art">
+    <h3>My Painting & Art Space</h3>
+    <p>
+        Painting is my creative escape. It helps me relax, slow down, and express myself in a way words sometimes cannot.
+        This section is where I share some of my artwork and creative experiments.
+    </p>
+
+    <h5>My Art Gallery</h5>
+    <p>Here are a few of my paintings:</p>
+
+    <div class="art-gallery">
+        <img src="images/1.jpg" alt="Painting by Nav 1" width="250">
+        <img src="images/2.jpg" alt="Painting by Nav 2" width="250">
+        <img src="images/3.jpg" alt="Painting by Nav 3" width="250">
+        <img src="images/4.jpg" alt="Painting by Nav 1" width="250">
+        <img src="images/5.jpg" alt="Painting by Nav 2" width="250">
+        <img src="images/6.jpg" alt="Painting by Nav 3" width="250">
+        <img src="images/7.jpg" alt="Painting by Nav 1" width="250">
+        <img src="images/8.jpg" alt="Painting by Nav 2" width="250">
     </div>
+
+    <p>
+        I’ll keep adding more artwork here as I create and explore new ideas.
+    </p>
+</div>
+</div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
