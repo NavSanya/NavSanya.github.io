@@ -140,6 +140,36 @@
     a { color: #580ba0; text-decoration: none; font-weight: 700; transition: color 0.3s ease; }
     a:hover { color: #E9C46A; }
 
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin: 18px 0 24px;
+    }
+
+    .contact-links a {
+      background: #F1FAEE;
+      color: #1D3557;
+      border-radius: 18px;
+      padding: 8px 12px;
+      font-weight: 700;
+    }
+
+    .profile-highlights {
+      margin: 0 0 16px 0;
+      padding-left: 1.15rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .meta {
+      color: #666;
+      font-weight: 700;
+      margin-top: -6px;
+    }
+
+    .project-entry { margin-bottom: 22px; }
+
     .school { display: flex; align-items: center; gap: 18px; margin: 18px 0; }
 
     /* Badge-style logo circles (no cropping) */
@@ -176,9 +206,10 @@
       .school img { width: 72px; height: 72px; }
     }
   </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="profile-page">
   <div class="header">
     <div class="logo">
       <a href="index.html">
@@ -191,22 +222,50 @@
   <div class="container">
     <div class="navbar">
       <a href="index.html">Home</a>
-      <a href="about.html">Professional Profile</a>
+      <a href="about.html" class="active">Professional Profile</a>
       <a href="fun.html">Fun</a>
     </div>
 
 
-    <div id="section2">
-      <h3>SUMMARY</h3>
+    <div id="section2" class="profile-summary">
+      <p class="eyebrow">Professional Profile</p>
+      <h2>AI, analytics, and ML work with a bias toward useful systems.</h2>
       <p>
-        Data science and analytics professional with dual Master’s degrees (Computer Science - Data Science; Business Analytics).
-        Experienced building end-to-end data products: SQL/Python pipelines, ML models, and Tableau dashboards for stakeholders.
-        Strong foundation in statistical modeling, machine learning, and backend development, with research exposure in multi-agent reinforcement learning.
-        Comfortable translating business questions into measurable experiments and clear recommendations.
+        AI and Data Analytics professional with dual Master's degrees in Computer Science and Business Analytics.
+        Experienced building machine learning systems, generative AI applications, predictive analytics solutions,
+        and scalable data pipelines across industry-sponsored consulting projects, research, and enterprise environments.
+        Skilled in Python, SQL, LLMs, RAG architectures, machine learning, and data engineering, with a proven ability
+        to translate complex technical insights into actionable business recommendations and lead cross-functional teams.
       </p>
-      <p><u><a href="mailto:anandnavsanya@gmail.com">anandnavsanya@gmail.com</a></u></p>
-      <p><u><a href="https://www.linkedin.com">LinkedIn</a></u></p>
-      <p><u><a href="https://www.github.com">GitHub</a></u></p>
+      <ul class="profile-highlights">
+        <li>Currently consulting on developer lifecycle modeling and technology adoption analytics for NVIDIA.</li>
+        <li>Builds RAG applications, semantic data pipelines, HMM-based inference systems, and decision-support dashboards.</li>
+        <li>Bridges AI research, analytics consulting, and stakeholder-facing business recommendations.</li>
+      </ul>
+      <div class="summary-metrics">
+        <div>
+          <strong>NVIDIA</strong>
+          <span>developer lifecycle analytics</span>
+        </div>
+        <div>
+          <strong>RAG</strong>
+          <span>agent-based GenAI systems</span>
+        </div>
+        <div>
+          <strong>HMM + MARL</strong>
+          <span>modeling and research</span>
+        </div>
+        <div>
+          <strong>Tableau</strong>
+          <span>stakeholder dashboards</span>
+        </div>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:anandnavsanya@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/nav-sanya-anand/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/NavSanya" target="_blank" rel="noopener">GitHub</a>
+        <a href="Nav_Resume_06122026.pdf" target="_blank" rel="noopener">Resume PDF</a>
+      </div>
     </div>
 
     <ul class="tabs">
@@ -214,7 +273,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#extracurricular">Extra Curricular</a></li>
+      <li><a href="#extracurricular">Leadership</a></li>
       <li><a href="#credentials">Certifications & Awards</a></li>
     </ul>
 
@@ -224,8 +283,8 @@
       <div class="school">
 	  <img src="Images/Calpoly_logo.jpg" alt="Cal Poly Logo" class="calpoly-logo">        <div class="school-info">
           <h4>California Polytechnic State University, San Luis Obispo, CA</h4>
-          <p><strong>Master of Science, Business Analytics</strong> — Aug 2025 - Jun 2026</p>
-          <p>Relevant Coursework: Essential Statistics, Data Management, Data Analytics & Mining, Machine Learning for Business.</p>
+          <p><strong>Master of Science in Business Analytics</strong> | Aug 2025 - Jun 2026</p>
+          <p>GPA: 3.81</p>
         </div>
       </div>
 
@@ -233,8 +292,8 @@
         <img src="Images/USC_logo.png" alt="USC Logo">
         <div class="school-info">
           <h4>University of Southern California, Los Angeles, CA</h4>
-          <p><strong>Master of Science, Computer Science (Data Science)</strong> — Aug 2022 - May 2024</p>
-          <p>Relevant Coursework: Algorithms, Database Systems, Foundations of AI, Machine Learning, Applied NLP.</p>
+          <p><strong>Master of Science in Computer Science</strong> | Concentration: Data Science | Aug 2022 - May 2024</p>
+          <p>GPA: 3.37</p>
         </div>
       </div>
 
@@ -242,8 +301,8 @@
         <img src="Images/Fresnostate_logo.png" alt="Fresno State Logo">
         <div class="school-info">
           <h4>California State University, Fresno, CA</h4>
-          <p><strong>Bachelor of Science, Computer Science</strong> — Aug 2018 - Dec 2021</p>
-          <p>Relevant Coursework: Data Structures, Database Systems, Artificial Intelligence, Parallel Programming.</p>
+          <p><strong>Bachelor of Science in Computer Science</strong> | Aug 2018 - Dec 2021</p>
+          <p>GPA: 3.79</p>
         </div>
       </div>
     </div>
@@ -251,123 +310,234 @@
     <div class="tab-content" id="experience">
       <h3>INDUSTRIAL EXPERIENCE</h3>
 
-	  <h4>Graduate Analytics Consultant — Industry-Sponsored Project (NDA)</h4>
-      <p>Jan 2026 – June 2026</p>
-      <ul class="experience-list">
-        <li>Created simulation + analytics workflows in Python to evaluate data-center energy efficiency using climate and cost variables.</li>
-        <li>Performed scenario and sensitivity analysis to compare regions and stress-test assumptions under weather variability.</li>
-        <li>Delivered reproducible notebooks, clear visualizations, and stakeholder-ready recommendations.</li>
-      </ul>
-	  
-      <h4>Digital Technology & Data Analytics Lead — Green International Auto, Inc., Fresno, CA</h4>
-      <p>Aug 2024 – Jul 2025</p>
-      <ul class="experience-list">
-        <li>Built executive-ready Tableau dashboards and automated reporting workflows to improve visibility into sales and operations.</li>
-        <li>Developed Python & SQL pipelines for cleaning, transforming, and analyzing operational datasets; standardized KPIs and reporting cadence.</li>
-        <li>Automated recurring data processing and Excel/VBA tasks to reduce manual effort and improve accuracy.</li>
-        <li>Partnered with stakeholders to translate business needs into measurable analytics deliverables and iterate quickly.</li>
-      </ul>
-      <p><u><a href="https://www.greenauto.co.in/" target="_blank">Green Auto</a></u></p>
+      <article class="profile-card">
+        <h4>NVIDIA | Graduate Industry-Sponsored Analytics Project Consultant</h4>
+        <p class="meta">San Luis Obispo, CA | Apr 2026 - Present</p>
+        <ul class="experience-list">
+          <li>Led a team of 25 graduate students delivering an analytics consulting solution focused on developer lifecycle modeling and technology adoption analysis.</li>
+          <li>Designed scalable AI frameworks to model developer behavior, engagement progression, and ecosystem adoption patterns.</li>
+          <li>Built semantic data pipelines using Python and SQL to transform large-scale activity logs into structured analytical features.</li>
+          <li>Developed Hidden Markov Model (HMM) based user-state inference systems for lifecycle prediction and behavioral segmentation.</li>
+          <li>Presented findings and strategic recommendations to NVIDIA stakeholders, receiving positive feedback for technical rigor and analytical depth.</li>
+        </ul>
+      </article>
 
-      <h4>Backend Development Intern — Arthasarathi, Mumbai, India</h4>
-      <p>Apr 2022 – Jul 2022</p>
-      <ul class="experience-list">
-        <li>Developed backend services using Spring Boot and MySQL to support product features and web application workflows.</li>
-        <li>Designed and optimized database schemas and queries to improve performance and reliability.</li>
-        <li>Implemented features, fixed defects, and supported releases through testing and production validation.</li>
-      </ul>
-      <p><u><a href="https://www.arthasarathi.com/" target="_blank">Arthasarathi</a></u></p>
+      <article class="profile-card">
+        <h4>Amplytico | Graduate Industry-Sponsored Analytics Project Consultant</h4>
+        <p class="meta">San Luis Obispo, CA | Jan 2026 - Mar 2026</p>
+        <ul class="experience-list">
+          <li>Built a Python-based simulation system modeling hyperscale data center efficiency across 50+ geographic scenarios.</li>
+          <li>Integrated 5+ years of weather and energy pricing data to optimize location-specific infrastructure decisions.</li>
+          <li>Improved decision accuracy by ~25% through sensitivity analysis and scenario modeling under climate variability.</li>
+          <li>Reduced analysis runtime by 40% through reproducible pipelines and optimized data workflows.</li>
+        </ul>
+      </article>
+
+      <article class="profile-card">
+        <h4>Green International Auto, Inc. | Digital Technology & Data Analytics Lead</h4>
+        <p class="meta">Fresno, CA | Aug 2024 - Jul 2025</p>
+        <ul class="experience-list">
+          <li>Designed Tableau dashboards used by senior leadership, reducing reporting turnaround time by 35%.</li>
+          <li>Built Python + SQL pipelines processing 10k+ records/month for sales and operations analysis.</li>
+          <li>Automated reporting workflows, cutting manual effort by ~50% and improving data accuracy.</li>
+          <li>Delivered insights that contributed to sales visibility and operational efficiency improvements.</li>
+        </ul>
+        <p><a href="https://www.greenauto.co.in/" target="_blank" rel="noopener">Green Auto</a></p>
+      </article>
+
+      <article class="profile-card">
+        <h4>Arthasarathi | Backend Development Intern</h4>
+        <p class="meta">Mumbai, India | Apr 2022 - Jul 2022</p>
+        <ul class="experience-list">
+          <li>Developed backend services using Spring Boot and MySQL to support data-driven web applications.</li>
+          <li>Designed and optimized database schemas to improve performance and data retrieval.</li>
+          <li>Implemented features based on product requirements and user feedback.</li>
+        </ul>
+        <p><a href="https://www.arthasarathi.com/" target="_blank" rel="noopener">Arthasarathi</a></p>
+      </article>
     </div>
 
     <div class="tab-content" id="projects">
       <h3>RESEARCH & SELECTED PROJECTS</h3>
 
-      <h4>Multi-Agent Reinforcement Learning & Ethical AI (Graduate Research)</h4>
-      <p>Designing MARL simulations with ethical constraints and running experiments to study arms-race dynamics and social-welfare tradeoffs.</p>
+      <div class="project-entry">
+        <h4>Jarvis AI Assistant (RAG + Agent-Based GenAI System)</h4>
+        <p class="meta">Apr 2026 - Present</p>
+        <p class="project-tags">
+          <span>RAG</span>
+          <span>LLMs</span>
+          <span>Vector Search</span>
+          <span>Backend Systems</span>
+        </p>
+        <ul class="experience-list">
+          <li>Built an enterprise-style AI assistant leveraging LLMs and Retrieval-Augmented Generation to deliver context-aware responses from custom knowledge bases.</li>
+          <li>Designed ingestion pipelines that transform unstructured documents into searchable vector embeddings.</li>
+          <li>Implemented semantic search, retrieval ranking, prompt engineering workflows, and modular backend services for additional AI agents.</li>
+        </ul>
+      </div>
 
-      <h4>LLM Performance Enhancement for Non-Latin Scripts</h4>
-      <p>Implemented romanization-based experiments to improve LLM performance on Hindi/Korean tasks; built modular evaluation workflows.</p>
+      <div class="project-entry">
+        <h4>Graduate Researcher - Multi-Agent Reinforcement Learning & Ethical AI</h4>
+        <p class="meta">California Polytechnic State University, San Luis Obispo | Oct 2025 - Present</p>
+        <p class="project-tags">
+          <span>MARL</span>
+          <span>Self-Play</span>
+          <span>Game Theory</span>
+          <span>Simulation</span>
+        </p>
+        <ul class="experience-list">
+          <li>Developing MARL environments that model strategic and ethical decision-making.</li>
+          <li>Implementing self-play, curriculum learning, and game-theoretic reward structures.</li>
+          <li>Building reproducible experimentation frameworks for large-scale simulation analysis.</li>
+        </ul>
+      </div>
 
-      <h4>Relational Database System (Python)</h4>
-      <p>Built a Python-based relational DB engine supporting joins, aggregation, and query execution on the IMDB Top 250 dataset.</p>
+      <div class="project-entry">
+        <h4>AI Content Crafter</h4>
+        <p class="project-tags">
+          <span>NLP</span>
+          <span>Prompt Engineering</span>
+          <span>LLMs</span>
+        </p>
+        <ul class="experience-list">
+          <li>Built an AI-powered content generation system leveraging NLP and large language models.</li>
+          <li>Implemented data preprocessing, prompt engineering, and evaluation workflows in a modular codebase.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <h4>LLM Performance Enhancement for Non-Latin Scripts</h4>
+        <p class="project-tags">
+          <span>Multilingual AI</span>
+          <span>Tokenization</span>
+          <span>Evaluation</span>
+        </p>
+        <ul class="experience-list">
+          <li>Improved multilingual model performance through custom preprocessing and tokenization strategies.</li>
+          <li>Achieved measurable accuracy improvements across non-Latin language datasets.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <h4>Relational Database System Implementation</h4>
+        <p class="project-tags">
+          <span>Python</span>
+          <span>Databases</span>
+          <span>Query Execution</span>
+        </p>
+        <ul class="experience-list">
+          <li>Developed a Python-based relational database engine supporting joins, indexing, and query execution.</li>
+          <li>Applied data modeling and optimization techniques using real-world IMDB datasets.</li>
+        </ul>
+      </div>
     </div>
 
     <div class="tab-content" id="skills">
       <h3>SKILLS</h3>
 
-      <h4>Programming & Data</h4>
-      <div>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">SQL</span>
-        <span class="skill-pill">Java</span>
-        <span class="skill-pill">C/C++</span>
-        <span class="skill-pill">HTML/CSS/JS</span>
-        <span class="skill-pill">Pandas</span>
-        <span class="skill-pill">NumPy</span>
-      </div>
+      <div class="skill-card-grid">
+        <section class="profile-card skill-group">
+          <h4>Languages</h4>
+          <div>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">C/C++</span>
+            <span class="skill-pill">Bash</span>
+          </div>
+        </section>
 
-      <h4>Machine Learning & AI</h4>
-      <div>
-        <span class="skill-pill">Scikit-learn</span>
-        <span class="skill-pill">PyTorch</span>
-        <span class="skill-pill">TensorFlow</span>
-        <span class="skill-pill">Model Evaluation</span>
-        <span class="skill-pill">Feature Engineering</span>
-        <span class="skill-pill">NLP (Foundations)</span>
-        <span class="skill-pill">Multi-Agent RL (Research)</span>
-      </div>
+        <section class="profile-card skill-group">
+          <h4>Gen AI & LLMs</h4>
+          <div>
+            <span class="skill-pill">RAG</span>
+            <span class="skill-pill">Prompt Engineering</span>
+            <span class="skill-pill">Vector Search</span>
+            <span class="skill-pill">LLM APIs</span>
+            <span class="skill-pill">Agent-Based Systems</span>
+          </div>
+        </section>
 
-      <h4>Data Engineering & Databases</h4>
-      <div>
-        <span class="skill-pill">MySQL</span>
-        <span class="skill-pill">MongoDB</span>
-        <span class="skill-pill">DynamoDB</span>
-        <span class="skill-pill">Data Pipelines</span>
-        <span class="skill-pill">APIs</span>
-      </div>
+        <section class="profile-card skill-group">
+          <h4>ML/AI</h4>
+          <div>
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">TensorFlow</span>
+            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">MARL</span>
+            <span class="skill-pill">HMM</span>
+            <span class="skill-pill">Optimization</span>
+          </div>
+        </section>
 
-      <h4>Visualization & Reporting</h4>
-      <div>
-        <span class="skill-pill">Tableau</span>
-        <span class="skill-pill">PowerBI</span>
-        <span class="skill-pill">Matplotlib</span>
-        <span class="skill-pill">Dashboarding</span>
-      </div>
+        <section class="profile-card skill-group">
+          <h4>Visualization</h4>
+          <div>
+            <span class="skill-pill">Tableau</span>
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">Matplotlib</span>
+          </div>
+        </section>
 
-      <h4>Tools & Platforms</h4>
-      <div>
-        <span class="skill-pill">Git/GitHub</span>
-        <span class="skill-pill">Jupyter/Colab</span>
-        <span class="skill-pill">VS Code</span>
-        <span class="skill-pill">AWS</span>
+        <section class="profile-card skill-group">
+          <h4>Cloud & Tools</h4>
+          <div>
+            <span class="skill-pill">AWS EC2</span>
+            <span class="skill-pill">AWS S3</span>
+            <span class="skill-pill">AWS Lambda</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">Jupyter</span>
+            <span class="skill-pill">Docker</span>
+          </div>
+        </section>
+
+        <section class="profile-card skill-group">
+          <h4>Databases & Data Workflows</h4>
+          <div>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">DynamoDB</span>
+            <span class="skill-pill">Data Pipelines</span>
+            <span class="skill-pill">APIs</span>
+          </div>
+        </section>
       </div>
     </div>
 
     <div class="tab-content" id="extracurricular">
-      <h3>EXTRACURRICULAR ACTIVITIES</h3>
+      <h3>LEADERSHIP & INVOLVEMENT</h3>
 
-      <h4>University of Southern California — TA at CS@SC</h4>
-      <p><strong>Jan 2024 - May 2024</strong></p>
-      <p>Supported instruction across courses (Robotics, Web Development, Scratch) and created student-facing materials.</p>
+      <article class="profile-card">
+        <h4>University of Southern California | Teaching Assistant - CS@SC</h4>
+        <p class="meta">Los Angeles, CA | Jan 2024 - May 2024</p>
+        <p>Supported instruction across Robotics, Web Development, and Scratch courses while creating student-facing materials.</p>
+      </article>
 
-      <h4>California State University, Fresno — Founder & President, Computer Science Club</h4>
-      <p>Organized workshops/events, led meetings, managed communication and social presence, and partnered with faculty/staff.</p>
-
-      <h4>International Ambassador — California State University, Fresno</h4>
-      <p>Guided incoming international students with housing, campus life, and onboarding.</p>
+      <article class="profile-card">
+        <h4>California State University, Fresno | Founder, President & Vice President - Computer Science Club</h4>
+        <p class="meta">Fresno, CA | Aug 2019 - Dec 2021</p>
+        <p>Organized workshops and events, led meetings, managed communication and social presence, and partnered with faculty and staff.</p>
+      </article>
     </div>
 
     <!-- COMBINED TAB: Certifications + Awards -->
     <div class="tab-content" id="credentials">
-      <h3>CERTIFICATIONS</h3>
-      <p><strong>AWS Academy Cloud Architecting training</strong> - Amazon AWS (March 2026)</p>
-      <p><strong>Cybersecurity for Data Science</strong> - University of Colorado Boulder (July 2023)</p>
-      <p><strong>Data Science Professional Certificate</strong> - IBM (October 2024)</p>
+      <h3>CERTIFICATIONS & AWARDS</h3>
 
-      <h3>AWARDS & HONORS</h3>
-      <p><strong>Outstanding International Student Award</strong> — California State University, Fresno (May 2021)</p>
-      <p><strong>President's List</strong> — California State University, Fresno (Fall 2018, Fall 2020)</p>
-      <p><strong>Dean’s List</strong> — California State University, Fresno (Spring 2019, Spring 2020, Spring 2021, Fall 2021)</p>
+      <div class="credential-grid">
+        <section class="profile-card">
+          <h4>Certifications</h4>
+          <p><strong>IBM Data Science Professional Certificate</strong> - Coursera (Oct 2024)</p>
+          <p><strong>AWS Academy Graduate - Cloud Architecting</strong> - Training Badge (Mar 2026)</p>
+        </section>
+
+        <section class="profile-card">
+          <h4>Awards & Honors</h4>
+          <p><strong>Outstanding International Student Award</strong> - California State University, Fresno (May 2021)</p>
+          <p><strong>President's List</strong> - California State University, Fresno (Fall 2018, Fall 2020)</p>
+          <p><strong>Dean's List</strong> - California State University, Fresno (Spring 2019, Spring 2020, Spring 2021, Fall 2021)</p>
+        </section>
+      </div>
     </div>
   </div>
 

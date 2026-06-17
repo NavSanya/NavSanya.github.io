@@ -101,6 +101,50 @@
             color: #f8f8f8;
         }
 
+        .tabs {
+            overflow: hidden;
+            background-color: #F1FAEE;
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabs li {
+            float: left;
+            width: 33.3333%;
+            text-align: center;
+        }
+
+        .tabs a {
+            display: block;
+            padding: 15px 10px;
+            color: #1D3557;
+            text-decoration: none;
+            background-color: #FFFFFF;
+            border-radius: 10px 10px 0 0;
+            font-weight: 500;
+        }
+
+        .tabs a:hover,
+        .tabs a.active {
+            background-color: #A8DADC;
+            color: #1D3557;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #FFFFFF;
+            clear: both;
+            border-radius: 0 10px 10px 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            color: #251439;
+        }
+
+        .tab-content.active { display: block; }
+
         h3 {
             color: #333;
             font-size: 1.5em;
@@ -134,11 +178,14 @@
     		border-radius: 10px;
     		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     		object-fit: cover;
+            max-width: 100%;
+            height: auto;
 		}
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="fun-page">
     <div class="header">
         <div class="logo">
             <a href="index.html"><img class="profile-photo" src="Images/passportphoto.jpg" alt="Nav Sanya Anand Photo"></a>
@@ -153,9 +200,14 @@
             <a href="fun.html" class="active">Fun</a>
         </div>
 
-        <div id="section2">
+        <div id="section2" class="fun-intro">
+            <p class="eyebrow">Curiosity Lab</p>
             <h1>Fun</h1>
-</div>
+            <p>
+                The human side of the portfolio: books, anime, and art. These are the little creative loops
+                that keep me curious, patient, and happy to keep learning new things.
+            </p>
+        </div>
 
 <ul class="tabs">
     <li><a href="#books" class="active">Books</a></li>
@@ -183,7 +235,7 @@
     <p>
         I also keep track of stories and favorites on Wattpad.
         You can explore my reading lists
-        <a href="https://www.wattpad.com/user/NavSanya" target="_blank">here</a>.
+        <a href="https://www.wattpad.com/user/NavSanya" target="_blank" rel="noopener">here</a>.
     </p>
 </div>
 
