@@ -122,9 +122,35 @@
         }
 
         a:hover { color: #E9C46A; }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .cta-row a {
+            background: #0043b8;
+            color: white;
+            border-radius: 8px;
+            padding: 11px 16px;
+        }
+
+        .cta-row a:hover {
+            background: #0397e7;
+            color: white;
+        }
+
+        .highlight-list {
+            color: #555;
+            line-height: 1.6;
+            padding-left: 1.2rem;
+        }
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
     <div class="header">
         <div class="logo">
             <a href="index.html"><img class="profile-photo" src="Images/passportphoto.jpg" alt="Nav Sanya Anand Photo"></a>
@@ -134,44 +160,111 @@
 
     <div class="container">
         <div class="navbar">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">Professional Profile</a>
             <a href="fun.html">Fun</a>
         </div>
 
-        <div class="content">
-            <h1>Hey, I’m Nav Sanya Anand!</h1>
-    
-    <p>
-      Welcome to my little corner of the internet where tech meets personality, and curiosity never takes a day off.
-      Whether you're here to explore, laugh, or just see what I’m all about, you’re in the right place.
-    </p>
+        <div class="content home-content">
+            <section class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Aspiring Data Scientist / AI + ML Builder</p>
+                    <h1>Turning messy data into models, dashboards, and AI tools people can use.</h1>
+                    <p class="lead">
+                        I'm Nav Sanya Anand, an AI and Data Analytics professional in California with graduate training
+                        in Computer Science and Business Analytics. I like building the full loop: clean pipelines,
+                        thoughtful models, useful GenAI systems, and stakeholder-ready insights.
+                    </p>
 
-    <h2>So, who is Nav?</h2>
-    
-    <p>
-      Think of me as a tech enthusiast by day, anime addict by night, and full-time explorer of anything interesting.
-      I enjoy building, learning, and diving into the world of code and AI, but I’m just as likely to be testing out
-      a new meme trend, perfecting my ramen recipe, or unwinding with a paintbrush in hand.
-    </p>
+                    <div class="cta-row">
+                        <a href="about.html">Explore Profile</a>
+                        <a href="Nav_Resume_06122026.pdf" target="_blank" rel="noopener">Resume PDF</a>
+                        <a href="https://www.linkedin.com/in/nav-sanya-anand/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/NavSanya" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
 
-    <p>
-      Painting and art are my reset button. When things get busy, I turn to creativity to slow things down and
-      simply enjoy the moment.
-    </p>
+                <aside class="signal-card" aria-label="Portfolio snapshot">
+                    <div class="signal-card-top">
+                        <span>nav_model.fit()</span>
+                        <span class="status-pill">open to AI/ML roles</span>
+                    </div>
+                    <div class="mini-chart" aria-hidden="true">
+                        <span style="height: 38%"></span>
+                        <span style="height: 62%"></span>
+                        <span style="height: 45%"></span>
+                        <span style="height: 76%"></span>
+                        <span style="height: 54%"></span>
+                        <span style="height: 88%"></span>
+                        <span style="height: 70%"></span>
+                    </div>
+                    <div class="stat-grid">
+                        <div>
+                            <strong>25</strong>
+                            <span>student team led</span>
+                        </div>
+                        <div>
+                            <strong>10k+</strong>
+                            <span>records/month</span>
+                        </div>
+                        <div>
+                            <strong>50+</strong>
+                            <span>scenarios modeled</span>
+                        </div>
+                    </div>
+                </aside>
+            </section>
 
-    <h2>A few fun facts:</h2>
-    
-    <ul>
-      <li><strong>Anime Fanatic:</strong> Currently hooked on <em>Demon Slayer</em> and <em>My Hero Academia</em></li>
-      <li><strong>Food Explorer:</strong> Always on the hunt for the best food, or trying to recreate it myself</li>
-      <li><strong>Creative Escape:</strong> Painting helps me relax and express ideas beyond words</li>
-      <li><strong>Endlessly Curious:</strong> If it’s new, weird, or exciting, I’m probably already into it</li>
-    </ul>
+            <section class="focus-grid" aria-label="Current focus">
+                <article class="focus-card">
+                    <span class="card-kicker">01</span>
+                    <h3>AI systems</h3>
+                    <p>RAG, agent-based workflows, vector search, prompt engineering, and LLM-backed assistants.</p>
+                </article>
+                <article class="focus-card">
+                    <span class="card-kicker">02</span>
+                    <h3>Machine learning</h3>
+                    <p>Predictive modeling, HMMs, MARL research, optimization, evaluation, and reproducible experiments.</p>
+                </article>
+                <article class="focus-card">
+                    <span class="card-kicker">03</span>
+                    <h3>Analytics delivery</h3>
+                    <p>Python and SQL pipelines, Tableau dashboards, scenario modeling, and clear business recommendations.</p>
+                </article>
+            </section>
 
-    <p>
-      This is just the beginning. There’s more to come, more to explore, and definitely more fun along the way.
-    </p>
+            <section class="tool-cloud">
+                <h2>Toolkit I keep reaching for</h2>
+                <ul class="skill-cloud">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>PyTorch</li>
+                    <li>TensorFlow</li>
+                    <li>Scikit-learn</li>
+                    <li>RAG</li>
+                    <li>Vector Search</li>
+                    <li>Tableau</li>
+                    <li>AWS</li>
+                    <li>Docker</li>
+                </ul>
+            </section>
+
+            <section class="personal-panel">
+                <div>
+                    <h2>Still very much me</h2>
+                    <p>
+                        This portfolio is part professional snapshot, part personal corner of the internet. The profile
+                        page has my resume-aligned experience, projects, skills, and credentials; the fun page has the
+                        books, anime, and art that keep me curious outside the dashboard.
+                    </p>
+                </div>
+                <ul class="spark-list">
+                    <li>Anime nights</li>
+                    <li>Food exploring</li>
+                    <li>Painting resets</li>
+                    <li>Curiosity loops</li>
+                </ul>
+            </section>
         </div>
     </div>
 </body>
